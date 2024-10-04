@@ -15,6 +15,7 @@ NewBarkTown_MapScriptHeader:
 	coord_event  1,  8, 0, NewBarkTown_TeacherStopsYouTrigger1
 	coord_event  1,  9, 0, NewBarkTown_TeacherStopsYouTrigger2
 	coord_event  6,  4, 0, NewBarkTown_LyraIntroTrigger
+	coord_event 15,  6, 0, NewBarkTown_CrazyScript
 	coord_event 17,  6, 1, NewBarkTown_LyraFinalTrigger1
 	coord_event 17,  7, 1, NewBarkTown_LyraFinalTrigger2
 	coord_event 17,  8, 1, NewBarkTown_LyraFinalTrigger3
@@ -37,6 +38,7 @@ NewBarkTown_MapScriptHeader:
 	object_const_def
 	const NEWBARKTOWN_RIVAL
 	const NEWBARKTOWN_LYRA
+	const NEWBARKTOWN_PANIC_LYRA
 	const NEWBARKTOWN_TEACHER
 
 NewBarkTownFlyPoint:
@@ -94,6 +96,50 @@ NewBarkTown_LyraIntroTrigger:
 	special FadeOutPalettes
 	pause 15
 	warpfacing UP, ELMS_LAB, 4, 11
+	end
+
+NewBarkTown_CrazyScript:
+	moveobject NEWBARKTOWN_LYRA, 11, 6
+	appear NEWBARKTOWN_LYRA
+	playmusic MUSIC_LYRA_ENCOUNTER_HGSS
+	applymovement NEWBARKTOWN_LYRA, Movement_LyraPanics_NBT
+	turnobject PLAYER, LEFT
+	showemote EMOTE_SHOCK, PLAYER, 15
+	showemote EMOTE_SHOCK, NEWBARKTOWN_LYRA, 15
+	turnobject NEWBARKTOWN_LYRA, UP
+	pause 10
+	turnobject NEWBARKTOWN_LYRA, DOWN
+	pause 10
+	turnobject NEWBARKTOWN_LYRA, RIGHT
+	special RestartMapMusic
+	showtext Text_LyraPanics1
+	showemote EMOTE_QUESTION, PLAYER, 15
+	showtext Text_LyraPanics2
+	applyonemovement NEWBARKTOWN_LYRA, step_down
+	applyonemovement NEWBARKTOWN_LYRA, step_right
+	follow NEWBARKTOWN_LYRA, PLAYER
+	applymovement NEWBARKTOWN_LYRA, Movement_LyraShowsPoltergeist_NBT
+	stopfollow
+	applyonemovement NEWBARKTOWN_LYRA, turn_head_up
+	applyonemovement PLAYER, turn_head_down
+	showtext Text_LyraPanics3 
+	applyonemovement NEWBARKTOWN_LYRA, turn_head_right
+	applyonemovement PLAYER, turn_head_right
+	pause 50
+	applyonemovement NEWBARKTOWN_LYRA, turn_head_up
+	applyonemovement PLAYER, turn_head_down
+	opentext
+	writetext Text_LyraPanics4
+	promptbutton
+	verbosegiveitem ESCAPE_ROPE
+	writetext Text_LyraPanics5 
+	promptbutton
+	closetext
+	applyonemovement PLAYER, turn_head_left
+	applymovement NEWBARKTOWN_LYRA, Movement_LyraLeavesAfterPanic_NBT
+	playsound SFX_EXIT_BUILDING
+	disappear NEWBARKTOWN_LYRA
+	moveobject NEWBARKTOWN_LYRA, 1, 6
 	end
 
 NewBarkTown_LyraFinalTrigger1:
@@ -204,6 +250,30 @@ Movement_TeacherBringsYouBack1_NBT:
 Movement_LyraEnters_NBT:
 	step_right
 	step_right
+	step_end
+
+Movement_LyraPanics_NBT:
+	run_step_right
+	run_step_right
+	run_step_down
+	run_step_left
+	run_step_up
+	run_step_right
+	run_step_right
+	step_end
+
+Movement_LyraShowsPoltergeist_NBT:
+	step_right
+	step_right
+	step_down
+	step_end
+
+Movement_LyraLeavesAfterPanic_NBT:
+	step_left
+	step_left
+	step_left
+	step_left
+	step_left
 	step_end
 
 Movement_LyraApproaches_NBT:
@@ -336,6 +406,60 @@ Text_LyraIntro:
 
 	para "Let's go and see"
 	line "what he wants!"
+	done
+
+Text_LyraPanics1:
+	text "Lyra: Watch out,"
+	line "<PLAYER>!!!!!!"
+
+	para "I was running"
+	line "away from the"
+	cont "poltergeists."
+	done
+
+Text_LyraPanics2:
+	text "Lyra: Come,"
+	line "I will show you."
+	done
+
+Text_LyraPanics3:
+	text "Lyra: They"
+	line "were in here.."
+
+	para "Somewhere,"
+	line "deep in the"
+	cont "water...."
+	done
+
+Text_LyraPanics4:
+	text "Lyra: You see"
+	line "that? Your own"
+	cont "reflection."
+
+	para "Sometimes, we are"
+	line "our own demons"
+
+	para "Here, take this."
+	line "It's an Escape"
+	cont "Rope."
+
+	para "It's useful for"
+	line "when you are in"
+	cont "trouble"
+
+	para "and you want to"
+	line "escape."
+
+	para "I will test out"
+	line "mine tonight."
+	cont "See ya!"
+	done
+
+Text_LyraPanics5:
+	text "Goodbye, <PLAYER>."
+
+	para "You have been a"
+	line "good friend."
 	done
 
 Text_LyraGoodbye1:
