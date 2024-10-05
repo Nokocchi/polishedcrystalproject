@@ -412,11 +412,16 @@ ENDM
 	map_attributes RockyBeach, ROCKY_BEACH, $35, SOUTH
 	connection south, ShamoutiIsland, SHAMOUTI_ISLAND, 0
 
-	map_attributes ValenciaIsland, VALENCIA_ISLAND, $0, WEST
-	connection west, Route49, ROUTE_49, -2
+	;map_attributes ValenciaIsland, VALENCIA_ISLAND, $0, WEST
+	map_attributes JungleValley, JUNGLE_VALLEY, $0, EAST
+	connection east, ValenciaPort, VALENCIA_PORT, 5
 
-	map_attributes Route49, ROUTE_49, $0, EAST
-	connection east, ValenciaIsland, VALENCIA_ISLAND, 2
+	map_attributes ValenciaPort, VALENCIA_PORT, $0, WEST
+	connection west, JungleValley, JUNGLE_VALLEY, -5
+
+	;map_attributes Route49, ROUTE_49, $0, EAST
+	;connection east, ValenciaIsland, VALENCIA_ISLAND, 2
+	map_attributes Route49, ROUTE_49, $0, 0
 
 	map_attributes RuggedRoadNorth, RUGGED_ROAD_NORTH, $71, SOUTH
 	connection south, RuggedRoadSouth, RUGGED_ROAD_SOUTH, 0
@@ -654,7 +659,7 @@ ENDM
 	map_attributes BattleFactoryHallway, BATTLE_FACTORY_HALLWAY, $0, 0
 	map_attributes BattleFactoryBattleRoom, BATTLE_FACTORY_BATTLE_ROOM, $0, 0
 	map_attributes RedsHouse1F, REDS_HOUSE_1F, $0, 0
-	map_attributes RedsHouse2F, REDS_HOUSE_2F, $0, 0
+	map_attributes NewPlayerHome2F, NEW_PLAYER_HOME_2F, $0, 0
 	map_attributes BluesHouse1F, BLUES_HOUSE_1F, $0, 0
 	map_attributes BluesHouse2F, BLUES_HOUSE_2F, $0, 0
 	map_attributes OaksLab, OAKS_LAB, $0, 0
@@ -923,4 +928,3 @@ ENDM
 	map_attributes IvysLab, IVYS_LAB, $0, 0
 	map_attributes IvysHouse, IVYS_HOUSE, $0, 0
 	map_attributes ValenciaHouse, VALENCIA_HOUSE, $0, 0
-	map_attributes ValenciaPort, VALENCIA_PORT, $0, 0

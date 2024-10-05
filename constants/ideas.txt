@@ -1,0 +1,23 @@
+Maybe the game starts with a black screen that explains what happened:
+x You start the game in a cave, in a jungle
+It's night, and rainy, with thunder
+You were out climbing/hiking and fell down a cliff
+You stayed the night in the cave (is it possible to do a fire animation thing? Campfire)
+x You have no pokemon
+As you try to escape, a suspicious man calls your name from between the trees
+He tries to sell you a Mankey - you have no money
+He gives it to you for free, says he needs to get it off his hands, and he runs off
+Turns out, it's just a normal monkey (Add monkey pokemon)
+A cutscene plays: You try to leave it, but it follows you. You walk, it follows, you look back, it pretends to look the other way.. You start running, it starts running, and eventually it bites you
+You are now infected and need an antidote. The monkey runs off
+The screen flashes, maybe green hue? 
+You stumble across a jungle hut where a woman makes an antidote for you.
+You feel better.
+She requests that you go out and find an item for her as a reward. 
+She lends you her Seaking so you can get up the waterfall and back home again. Some kind of one-way thing at the top of the waterfall where you give the Seaking back
+Your home town is at the top of the cliff
+You are now home and can talk to professor
+
+Spooky guy who calls you on your phone
+Guy who tries to sell you a mankey, sees you are not interested, gives it to you for free, turns out to be a regular monkey, bites you, you need antidote
+Push rocket grunt into a hole with Strength and walk over him

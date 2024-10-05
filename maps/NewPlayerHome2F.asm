@@ -1,18 +1,18 @@
-RedsHouse2F_MapScriptHeader:
+NewPlayerHome2F_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
 
 	def_warp_events
-	warp_event  7,  0, REDS_HOUSE_1F, 3
+	warp_event  9,  1, VALENCIA_PORT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  0,  1, BGEVENT_JUMPTEXT, RedsHouse2FPCText
-	bg_event  3,  5, BGEVENT_JUMPTEXT, RedsHouse2FSNESText
-	bg_event  4,  1, BGEVENT_READ, PokemonJournalProfOakScript
-	bg_event  5,  1, BGEVENT_READ, PokemonJournalProfOakScript
+	bg_event  5,  2, BGEVENT_JUMPTEXT, NewPlayerHome2FPCText
+	bg_event  4,  2, BGEVENT_JUMPTEXT, NewPlayerHome2FSNESText
+	bg_event  6,  2, BGEVENT_READ, PokemonJournalProfOakScript
+	bg_event  7,  2, BGEVENT_READ, PokemonJournalProfOakScript
 
 	def_object_events
 
@@ -30,7 +30,7 @@ PokemonJournalProfOakScript:
 
 	para "Daisy, live near"
 	line "his lab in Pallet"
-	cont "Town."
+	cont "Town!"
 
 	para "His cousin Samson"
 	line "is rumored to live"
@@ -39,13 +39,13 @@ PokemonJournalProfOakScript:
 	line "Alola region."
 	done
 
-RedsHouse2FPCText:
-	text "It looks like it"
-	line "hasn't been used"
-	cont "in a long time…"
+NewPlayerHome2FPCText:
+	text "Yuck! It's covered"
+	line "in crumbs and old"
+	cont "candy wrappers…"
 	done
 
-RedsHouse2FSNESText:
+NewPlayerHome2FSNESText:
 	text "<PLAYER> played the"
 	line "SNES."
 

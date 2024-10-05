@@ -4,8 +4,8 @@ IvysHouse_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  2,  7, VALENCIA_ISLAND, 2
-	warp_event  3,  7, VALENCIA_ISLAND, 2
+	warp_event  2,  7, JUNGLE_VALLEY, 2
+	warp_event  3,  7, JUNGLE_VALLEY, 2
 
 	def_coord_events
 

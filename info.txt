@@ -1,0 +1,21 @@
+verbosegiveitem:
+	- Needs to have an open textbox first, and close afterwards
+
+showtext:
+	- Opens textbox, writes text, closes textbos
+
+writetext:
+	- Writes text to currently open textbox
+
+far...
+	- Do stuff with other banks
+
+
+Water, yellow, roof and text are special colors.
+- Lightest color of water cycles, yellow glows at night, roof is blue indoors and changes with time of day, text is reserved
+Tile 0 should not be used, is for map border
+Tilesets can contain 192 8x8 tiles
+Tiles $60 to $7F or $E0 to $FF are used for text and not map tiles. 
+But can be changes so that all 255 can be used
+4x4 tiles can be used to build blocks. 
+Tiles from $0:01 to $0:80 can be animated

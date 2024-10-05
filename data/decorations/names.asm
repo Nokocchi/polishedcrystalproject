@@ -10,7 +10,6 @@ DecorationNames:
 	li "Diploma"
 	li "Super NES"
 	li "Nintendo 64"
-	li "GameCube"
 	li "Wii"
 	li "Gold Trophy"
 	li "Silver Trophy"

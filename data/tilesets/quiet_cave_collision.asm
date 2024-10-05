@@ -53,7 +53,7 @@
 	tilecoll WALL, WALL, WALL, WALL ; 34
 	tilecoll WALL, WALL, WALL, WALL ; 35
 	tilecoll FLOOR, WALL, FLOOR, WALL ; 36
-	tilecoll WALL, WALL, WALL, CAVE ; 37
+	tilecoll WALL, CAVE, FLOOR, FLOOR ; 37
 	tilecoll WALL, LEDGE_DOWN_LEFT, WALL, WALL ; 38
 	tilecoll LEDGE_DOWN, LEDGE_DOWN, WALL, WALL ; 39
 	tilecoll LEDGE_DOWN_RIGHT, WALL, WALL, WALL ; 3a
@@ -229,7 +229,7 @@
 	tilecoll WALL, WALL, WALL, WALL ; e4
 	tilecoll WALL, WALL, WALL, WALL ; e5
 	tilecoll FLOOR, FLOOR, FLOOR, WARP_CARPET_DOWN ; e6
-	tilecoll FLOOR, FLOOR, WALL, FLOOR ; e7
+	tilecoll WALL, CAVE, FLOOR, FLOOR ; e7
 	tilecoll FLOOR, FLOOR, WALL, FLOOR ; e8
 	tilecoll FLOOR, FLOOR, FLOOR, WALL ; e9
 	tilecoll FLOOR, FLOOR, WALL, BOTTOM_WALL ; ea

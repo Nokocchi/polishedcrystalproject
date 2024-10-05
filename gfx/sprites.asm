@@ -548,8 +548,8 @@ SnesSpriteGFX:: INCBIN "gfx/sprites/snes.2bpp.lz"
 SECTION "N64SpriteGFX", ROMX
 N64SpriteGFX:: INCBIN "gfx/sprites/n64.2bpp.lz"
 
-SECTION "GameCubeSpriteGFX", ROMX
-GameCubeSpriteGFX:: INCBIN "gfx/sprites/gamecube.2bpp.lz"
+SECTION "SuspiciousManSpriteGFX", ROMX
+SuspiciousManSpriteGFX:: INCBIN "gfx/sprites/suspiciousman.2bpp.lz"
 
 SECTION "WiiSpriteGFX", ROMX
 WiiSpriteGFX:: INCBIN "gfx/sprites/wii.2bpp.lz"

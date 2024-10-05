@@ -8,7 +8,7 @@ SpawnPoints:
 ; entries correspond to SPAWN_* constants
 	table_width 4, SpawnPoints
 
-	spawn PLAYERS_HOUSE_2F,            3,  3
+	spawn NEW_PLAYER_HOME_2F,          3,  3
 
 	spawn PALLET_TOWN,                 5,  6
 	spawn VIRIDIAN_CITY,              23, 26
@@ -43,7 +43,7 @@ SpawnPoints:
 	spawn FAST_SHIP_CABINS_SW_SSW_NW,  6,  2
 
 	spawn SHAMOUTI_ISLAND,            21, 14
-	spawn VALENCIA_ISLAND,             8, 14
+	spawn JUNGLE_VALLEY,               8, 14
 	spawn NAVEL_ROCK_OUTSIDE,         12, 23
 
 	spawn N_A,                        -1, -1

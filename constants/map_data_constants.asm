@@ -119,7 +119,7 @@ DEF NUM_FISHGROUPS EQU const_value
 	const SPAWN_FAST_SHIP
 ; orange
 	const SPAWN_SHAMOUTI
-	const SPAWN_VALENCIA
+	const SPAWN_JUNGLE_VALLEY
 	const SPAWN_NAVEL
 DEF NUM_SPAWNS EQU const_value
 

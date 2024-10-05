@@ -4,61 +4,111 @@ ValenciaPort_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 10, 17, ROUTE_49, 1
-	warp_event 11, 17, ROUTE_49, 1
+	warp_event 25, 17, NEW_PLAYER_HOME_2F, 1
 
 	def_coord_events
+	coord_event  10,  14, 0, ValenciaPort_SuspiciousGuyTrigger0a
+	coord_event  10,  15, 0, ValenciaPort_SuspiciousGuyTrigger0b
+
+	coord_event  8,  14, 1, ValenciaPort_SuspiciousGuyTrigger1a
+	coord_event  8,  15, 1, ValenciaPort_SuspiciousGuyTrigger1b
 
 	def_bg_events
 	bg_event 10,  9, BGEVENT_ITEM + MAX_POTION, EVENT_VALENCIA_PORT_HIDDEN_MAX_POTION
 
 	def_object_events
-	object_event 11,  4, SPRITE_SAILOR, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ValenciaPortSailorScript, -1
-	object_event 13, 10, SPRITE_FISHER, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, ValenciaPortFisherText, -1
+	object_event  7, 12, SPRITE_SUSPICIOUS_MAN, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ValenciaPortFisherText, EVENT_VALENCIA_PORT_SUSPICIOUS_MAN
 
 	object_const_def
-	const VALENCIAPORT_SAILOR
+	const SUSPICIOUS_MAN
 
-ValenciaPortSailorScript:
-	faceplayer
-	opentext
-	writetext .QuestionText
-	yesorno
-	iffalsefwd .RefuseFerry
-	writetext .DepartText
-	waitbutton
-	closetext
-	turnobject VALENCIAPORT_SAILOR, UP
-	pause 10
-	playsound SFX_EXIT_BUILDING
-	disappear VALENCIAPORT_SAILOR
-	waitsfx
-	applyonemovement PLAYER, step_up
-	playsound SFX_EXIT_BUILDING
-	special FadeOutPalettes
-	waitsfx
-	setmapscene SEAGALLOP_FERRY_SHAMOUTI_GATE, $1
-	warp SEAGALLOP_FERRY_SHAMOUTI_GATE, 6, 5
+ValenciaPort_SuspiciousGuyTrigger0a:
+ValenciaPort_SuspiciousGuyTrigger0b:
+	showemote EMOTE_SHOCK, SUSPICIOUS_MAN, 15
+	showtext Text_SuspiciousManPsst
+	setscene $1
 	end
 
-.RefuseFerry
-	jumpopenedtext .RefuseText
+ValenciaPort_SuspiciousGuyTrigger1a:
+	showtext Text_SuspiciousManComeHere
+	applymovement PLAYER, Movement_GoToSuspiciousManA
+	sjumpfwd GiveMonkey
+ValenciaPort_SuspiciousGuyTrigger1b:
+	showtext Text_SuspiciousManComeHere
+	applymovement PLAYER, Movement_GoToSuspiciousManB
+	sjumpfwd GiveMonkey
 
-.QuestionText:
-	text "Going back to"
-	line "Shamouti Island?"
+GiveMonkey:
+	showtext Text_SuspiciousManSalesPitch
+	opentext
+	givepoke CYNDAQUIL, PLAIN_FORM, 5, ORAN_BERRY
+	closetext
+	showtext Text_SuspiciousManGoodbye
+	applymovement SUSPICIOUS_MAN, Movement_SuspiciousManEscape
+	disappear SUSPICIOUS_MAN
+	setscene $2
+	end
+
+Movement_SuspiciousManEscape:
+	run_step_left
+	run_step_left
+	run_step_left
+	run_step_left
+
+Movement_GoToSuspiciousManA:
+	step_left
+	step_up
+	step_end
+
+Movement_GoToSuspiciousManB:
+	step_left
+	step_up
+	step_up
+	step_end
+
+Text_SuspiciousManComeHere:
+	text "???: Pssttt!"
+
+	para "Over here!"
 	done
 
-.DepartText:
-	text "All right!"
+Text_SuspiciousManPsst:
+	text "???: Pssttt!"
 
-	para "All aboard the"
-	line "Seagallop Ferry!"
+	para "Hey kid! Psstt!"
 	done
 
-.RefuseText:
-	text "I'll be waiting"
-	line "right here."
+Text_SuspiciousManSalesPitch:
+	text "???: Hey kid,"
+	line "Do you wanna buy"
+	cont "a Mankey?"
+
+	para "It will only set"
+	line "you back ¥500."
+
+	para "Can't afford it?"
+	line "alright, ¥300."
+
+	para "What?! Still no?"
+	line "Okay, ¥200, final"
+	cont "offer!"
+
+	para "You're practically"
+	line "stealing from me"
+	cont "at this point.."
+
+	para "You don't have any"
+	line "money?"
+
+	para "Fine.. Just take"
+	line "it. I need to get"
+	cont "it off my hands."
+	done
+
+Text_SuspiciousManGoodbye:
+	text "???: See ya, kid."
+	line "Nice doin business"
+	cont "with ya!"
 	done
 
 ValenciaPortFisherText:

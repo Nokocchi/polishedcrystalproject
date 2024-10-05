@@ -25,7 +25,6 @@ CeladonDeptStore3F_MapScriptHeader:
 	object_event  0,  4, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, VideoGameClerkText, -1
 	object_event  1,  3, SPRITE_SNES, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FSnesScript, -1
 	object_event  1,  5, SPRITE_N64, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, PAL_NPC_GRAY, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FN64Script, -1
-	object_event  4,  3, SPRITE_GAMECUBE, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FGameCubeScript, -1
 	object_event  4,  5, SPRITE_WII, SPRITEMOVEDATA_STILL, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, CeladonDeptStore3FWiiScript, -1
 
 CeladonDeptStore3FClerk2Script:
@@ -96,24 +95,6 @@ CeladonDeptStore3FN64Script:
 	special PlaceMoneyTopRight
 	waitbutton
 	jumpopenedtext N64SentText
-
-CeladonDeptStore3FGameCubeScript:
-	checkevent EVENT_DECO_GAMECUBE
-	iftrue_jumptext CeladonDeptStore3FGameCubeText
-	opentext
-	writetext VideoGameClerkSellGameCubeText
-	special PlaceMoneyTopRight
-	yesorno
-	iffalse_jumpopenedtext VideoGameClerkNoSaleText
-	checkmoney $0, 30000
-	ifequal $2, VideoGameClerkNoMoneyScript
-	takemoney $0, 30000
-	setevent EVENT_DECO_GAMECUBE
-	writetext BoughtGameCubeText
-	playsound SFX_TRANSACTION
-	special PlaceMoneyTopRight
-	waitbutton
-	jumpopenedtext GameCubeSentText
 
 CeladonDeptStore3FWiiScript:
 	checkevent EVENT_DECO_WII
@@ -205,14 +186,6 @@ VideoGameClerkSellN64Text:
 	line "Want one?"
 	done
 
-VideoGameClerkSellGameCubeText:
-	text "Clerk: That Game-"
-	line "Cube can be yours"
-
-	para "for just ¥30,000!"
-	line "Want one?"
-	done
-
 VideoGameClerkSellWiiText:
 	text "Clerk: That Wii"
 	line "can be yours for"
@@ -238,16 +211,6 @@ BoughtN64Text:
 
 N64SentText:
 	text "Nintendo 64"
-	line "was sent home."
-	done
-
-BoughtGameCubeText:
-	text "<PLAYER> bought"
-	line "GameCube."
-	done
-
-GameCubeSentText:
-	text "GameCube"
 	line "was sent home."
 	done
 
@@ -294,13 +257,6 @@ CeladonDeptStore3FSnesText:
 
 CeladonDeptStore3FN64Text:
 	text "It's an N64!"
-
-	para "I have one of"
-	line "those at home!"
-	done
-
-CeladonDeptStore3FGameCubeText:
-	text "It's a GameCube!"
 
 	para "I have one of"
 	line "those at home!"

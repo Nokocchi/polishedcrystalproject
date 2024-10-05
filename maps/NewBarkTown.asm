@@ -38,7 +38,6 @@ NewBarkTown_MapScriptHeader:
 	object_const_def
 	const NEWBARKTOWN_RIVAL
 	const NEWBARKTOWN_LYRA
-	const NEWBARKTOWN_PANIC_LYRA
 	const NEWBARKTOWN_TEACHER
 
 NewBarkTownFlyPoint:

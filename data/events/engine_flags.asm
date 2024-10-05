@@ -111,7 +111,7 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_BLACKTHORN
 	engine_flag wVisitedSpawns, SPAWN_MT_SILVER
 	engine_flag wVisitedSpawns, SPAWN_SHAMOUTI
-	engine_flag wVisitedSpawns, SPAWN_VALENCIA
+	engine_flag wVisitedSpawns, SPAWN_JUNGLE_VALLEY
 	engine_flag wVisitedSpawns, SPAWN_NAVEL
 
 	engine_flag wLuckyNumberShowFlag, LUCKYNUMBERSHOW_GAME_OVER_F

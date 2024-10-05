@@ -274,7 +274,6 @@ FindOwnedConsoles:
 .consoles:
 	db DECO_SNES ; 15
 	db DECO_N64 ; 16
-	db DECO_GAMECUBE ; 17
 	db DECO_WII ; 18
 	db -1
 

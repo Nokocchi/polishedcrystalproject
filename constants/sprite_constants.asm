@@ -185,7 +185,7 @@
 	const SPRITE_BOOK_PAPER_POKEDEX ; b5
 	const SPRITE_SNES ; b6
 	const SPRITE_N64 ; b7
-	const SPRITE_GAMECUBE ; b8
+	const SPRITE_SUSPICIOUS_MAN ; b8
 	const SPRITE_WII ; b9
 	const SPRITE_SILVER_TROPHY ; ba
 	const SPRITE_GOLD_TROPHY ; bb

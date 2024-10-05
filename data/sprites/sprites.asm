@@ -190,7 +190,7 @@ SpriteHeaders:
 	overworld_sprite BookPaperPokedexSpriteGFX, STANDING_SPRITE, PAL_OW_BROWN
 	overworld_sprite SnesSpriteGFX, STANDING_SPRITE, PAL_OW_BROWN
 	overworld_sprite N64SpriteGFX, STANDING_SPRITE, PAL_OW_GRAY
-	overworld_sprite GameCubeSpriteGFX, STANDING_SPRITE, PAL_OW_PURPLE
+	overworld_sprite SuspiciousManSpriteGFX, STANDING_SPRITE, PAL_OW_PURPLE
 	overworld_sprite WiiSpriteGFX, STANDING_SPRITE, PAL_OW_AZURE
 	overworld_sprite SilverTrophySpriteGFX, STANDING_SPRITE, PAL_OW_WHITE
 	overworld_sprite GoldTrophySpriteGFX, STANDING_SPRITE, PAL_OW_YELLOW

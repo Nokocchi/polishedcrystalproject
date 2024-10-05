@@ -24,7 +24,6 @@ DecorationIDs:
 
 	db DECO_SNES ; 16
 	db DECO_N64 ; 17
-	db DECO_GAMECUBE ; 18
 	db DECO_WII ; 19
 
 	db DECO_PIKACHU_DOLL ; 1f

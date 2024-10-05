@@ -149,7 +149,7 @@ Landmarks:
 	landmark  76,  76, IceIslandName
 	landmark  92,  76, LightningIslandName
 	landmark  68, 116, Route49Name
-	landmark  76, 116, ValenciaIslandName
+	landmark  76, 116, JungleValleyName
 	landmark 132, 100, NavelRockName
 	landmark  24, 120, FarawayIslandName
 	assert_table_length NUM_LANDMARKS
@@ -292,10 +292,11 @@ FireIslandName:        rawchar "Fire¯Island@"
 IceIslandName:         rawchar "Ice Island@"
 LightningIslandName:   rawchar "Lightning¯Island@"
 Route49Name:           rawchar "Route 49@"
-ValenciaIslandName:    rawchar "Valencia¯Island@"
+JungleValleyName:      rawchar "Jungle¯Valley@"
 NavelRockName:         rawchar "Navel Rock@"
 FarawayIslandName:     rawchar "Faraway¯Island@"
 SinjohRuinsName:       rawchar "Sinjoh¯Ruins@"
 MystriStageName:       rawchar "Mystri¯Stage@"
 CinnabarLabName:       rawchar "Pokémon¯Lab@"
 SpecialMapName:        rawchar "?@"
+	; nTODO Make a name for the starting cave

@@ -964,10 +964,10 @@ SECTION "BluesHouse1F_BlockData", ROMX
 BluesHouse1F_BlockData:
 	INCBIN "maps/BluesHouse1F.ablk.lz"
 
-SECTION "RedsHouse2F_BlockData", ROMX
-RedsHouse2F_BlockData:
+SECTION "NewPlayerHome2F_BlockData", ROMX
+NewPlayerHome2F_BlockData:
 BluesHouse2F_BlockData:
-	INCBIN "maps/RedsHouse2F.ablk.lz"
+	INCBIN "maps/NewPlayerHome2F.ablk.lz"
 
 SECTION "ViridianGym_BlockData", ROMX
 ViridianGym_BlockData:
@@ -1610,9 +1610,9 @@ IceIslandRoof_BlockData:
 LightningIslandRoof_BlockData:
 	INCBIN "maps/ElementalIsland.ablk.lz"
 
-SECTION "ValenciaIsland_BlockData", ROMX
-ValenciaIsland_BlockData:
-	INCBIN "maps/ValenciaIsland.ablk.lz"
+SECTION "JungleValley_BlockData", ROMX
+JungleValley_BlockData:
+	INCBIN "maps/JungleValley.ablk.lz"
 
 SECTION "ValenciaPort_BlockData", ROMX
 ValenciaPort_BlockData:

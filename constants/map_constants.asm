@@ -313,7 +313,6 @@ ENDM
 	map_const ROUTE_1,                                    12, 18 ;  1
 	map_const PALLET_TOWN,                                10,  9 ;  2
 	map_const REDS_HOUSE_1F,                               4,  4 ;  3
-	map_const REDS_HOUSE_2F,                               4,  4 ;  4
 	map_const BLUES_HOUSE_1F,                              4,  4 ;  5
 	map_const BLUES_HOUSE_2F,                              4,  4 ;  6
 	map_const OAKS_LAB,                                    5,  6 ;  7
@@ -598,6 +597,7 @@ ENDM
 	map_const QUIET_CAVE_B1F,                             18, 18 ;  6
 	map_const QUIET_CAVE_B2F,                             18, 18 ;  7
 	map_const QUIET_CAVE_B3F,                             18, 18 ;  8
+	map_const NEW_PLAYER_HOME_2F,                          6,  4 ;  9
 
 	newgroup                                                     ; 28
 	map_const ROUTE_9,                                    26,  9 ;  1
@@ -675,12 +675,12 @@ ENDM
 	map_const SAFARI_ZONE_WEST_REST_HOUSE_2,               4,  4 ;  9
 
 	newgroup                                                     ; 33
-	map_const VALENCIA_ISLAND,                            14, 12 ;  1
+	map_const JUNGLE_VALLEY,                              14, 12 ;  1
 	map_const ROUTE_49,                                   20, 11 ;  2
 	map_const IVYS_LAB,                                    5,  6 ;  3
 	map_const IVYS_HOUSE,                                  4,  4 ;  4
 	map_const VALENCIA_HOUSE,                              4,  4 ;  5
-	map_const VALENCIA_PORT,                              11,  9 ;  6
+	map_const VALENCIA_PORT,                              21, 10 ;  6
 
 	newgroup                                                     ; 34
 	map_const SINJOH_RUINS,                                9, 13 ;  1

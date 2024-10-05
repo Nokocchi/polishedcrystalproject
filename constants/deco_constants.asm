@@ -28,7 +28,6 @@ DEF NUM_DECO_TYPES EQU const_value - 1
 	const DIPLOMA
 	const SUPER_NES
 	const NINTENDO_64
-	const GAMECUBE
 	const WII
 	const GOLD_TROPHY
 	const SILVER_TROPHY
@@ -106,7 +105,6 @@ ENDM
 	const CONSOLES
 	deco  SNES
 	deco  N64
-	deco  GAMECUBE
 	deco  WII
 ; FindOwnedBigDolls.big_dolls values (see engine/overworld/decorations.asm)
 	const BIG_DOLLS
