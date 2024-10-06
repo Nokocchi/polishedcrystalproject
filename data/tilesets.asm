@@ -380,12 +380,14 @@ TilesetCaveGFX1:: INCBIN "gfx/tilesets/cave.2bpp.vram1.lz"
 TilesetQuietCaveGFX0:: INCBIN "gfx/tilesets/quiet_cave.2bpp.vram0.lz"
 TilesetQuietCaveGFX1:: INCBIN "gfx/tilesets/quiet_cave.2bpp.vram1.lz"
 
-TilesetCaveMeta::
-TilesetQuietCaveMeta:: INCBIN "data/tilesets/cave_metatiles.bin.lz"
-TilesetCaveAttr::
-TilesetQuietCaveAttr:: INCBIN "data/tilesets/cave_attributes.bin.lz"
-TilesetCaveColl::
-TilesetQuietCaveColl:: INCBIN "data/tilesets/cave_collision.bin.lz"
+; Used to have an optimization where both quiet cave and cave used the data from the cave tileset
+TilesetCaveMeta:: INCBIN "data/tilesets/cave_metatiles.bin.lz"
+TilesetCaveAttr:: INCBIN "data/tilesets/cave_attributes.bin.lz"
+TilesetCaveColl:: INCBIN "data/tilesets/cave_collision.bin.lz"
+
+TilesetQuietCaveMeta:: INCBIN "data/tilesets/quiet_cave_metatiles.bin.lz"
+TilesetQuietCaveAttr:: INCBIN "data/tilesets/quiet_cave_attributes.bin.lz"
+TilesetQuietCaveColl:: INCBIN "data/tilesets/quiet_cave_collision.bin.lz"
 
 
 SECTION "Tileset Data - ice_path", ROMX

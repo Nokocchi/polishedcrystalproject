@@ -4,15 +4,15 @@ NewPlayerHome2F_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  9,  1, VALENCIA_PORT, 1
+	warp_event 11,  1, VALENCIA_PORT, 1
 
 	def_coord_events
 
 	def_bg_events
-	bg_event  5,  2, BGEVENT_JUMPTEXT, NewPlayerHome2FPCText
-	bg_event  4,  2, BGEVENT_JUMPTEXT, NewPlayerHome2FSNESText
-	bg_event  6,  2, BGEVENT_READ, PokemonJournalProfOakScript
-	bg_event  7,  2, BGEVENT_READ, PokemonJournalProfOakScript
+	bg_event  3,  6, BGEVENT_JUMPTEXT, NewPlayerHome2FPCText
+	bg_event  2,  6, BGEVENT_JUMPTEXT, NewPlayerHome2FSNESText
+	bg_event  4,  6, BGEVENT_READ, PokemonJournalProfOakScript
+	bg_event  5,  6, BGEVENT_READ, PokemonJournalProfOakScript
 
 	def_object_events
 
