@@ -290,7 +290,7 @@ AnimationPointers:
 	dw DudunsparceTwoSegmentAnimation
 	dw FarigirafAnimation
 	dw ClodsireAnimation
-	dw AnnihilapeAnimation
+	dw MonkeyAnimation
 	assert_table_length NUM_SPECIES
 
 	dw UnownBAnimation

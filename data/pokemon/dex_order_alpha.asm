@@ -8,7 +8,6 @@ AlphabeticalPokedexOrder:
 	dp ALAKAZAM
 	dp AMBIPOM
 	dp AMPHAROS
-	dp ANNIHILAPE
 	dp ARBOK
 	dp ARCANINE
 	dp ARIADOS
@@ -159,6 +158,7 @@ AlphabeticalPokedexOrder:
 	dp MISDREAVUS
 	dp MISMAGIUS
 	dp MOLTRES
+	dp MONKEY
 	dp MR__MIME
 	dp MR__RIME
 	dp MUK

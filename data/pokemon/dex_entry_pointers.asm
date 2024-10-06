@@ -291,7 +291,7 @@ PokedexDataPointerTable:
 	dba DudunsparcePokedexEntry
 	dba FarigirafPokedexEntry
 	dba ClodsirePokedexEntry
-	dba AnnihilapePokedexEntry
+	dba MonkeyPokedexEntry
 	assert_table_length NUM_SPECIES
 
 	dba GyaradosRedPokedexEntry

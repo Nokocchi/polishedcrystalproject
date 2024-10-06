@@ -240,7 +240,7 @@ SneaslerAnimation:   INCLUDE "gfx/pokemon/sneasler/anim.asm"
 OverqwilAnimation:   INCLUDE "gfx/pokemon/overqwil/anim.asm"
 FarigirafAnimation:  INCLUDE "gfx/pokemon/farigiraf/anim.asm"
 ClodsireAnimation:   INCLUDE "gfx/pokemon/clodsire/anim.asm"
-AnnihilapeAnimation: INCLUDE "gfx/pokemon/annihilape/anim.asm"
+MonkeyAnimation:     INCLUDE "gfx/pokemon/monkey/anim.asm"
 
 EggAnimation:        INCLUDE "gfx/pokemon/egg/anim.asm"
 

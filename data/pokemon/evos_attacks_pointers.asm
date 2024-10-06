@@ -294,7 +294,7 @@ EvosAttacksPointers::
 	dw DudunsparceEvosAttacks
 	dw FarigirafEvosAttacks
 	dw ClodsireEvosAttacks
-	dw AnnihilapeEvosAttacks
+	dw MonkeyEvosAttacks
 	assert_table_length NUM_SPECIES
 
 	dw GyaradosEvosAttacks

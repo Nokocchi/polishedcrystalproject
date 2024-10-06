@@ -294,7 +294,7 @@ MiniIconPointers:
 	mini_icon DudunsparceTwoSegment
 	mini_icon Farigiraf
 	mini_icon Clodsire
-	mini_icon Annihilape
+	mini_icon Monkey
 	assert_table_length NUM_SPECIES
 
 	mini_icon UnownB

@@ -290,7 +290,7 @@ FramesPointers:
 	dw DudunsparceTwoSegmentFrames
 	dw FarigirafFrames
 	dw ClodsireFrames
-	dw AnnihilapeFrames
+	dw MonkeyFrames
 	assert_table_length NUM_SPECIES
 
 	dw UnownBFrames

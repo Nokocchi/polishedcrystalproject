@@ -1452,10 +1452,10 @@ ClodsireMini::     INCBIN "gfx/minis/clodsire.2bpp.lz"
 ClodsireMiniMask:: INCBIN "gfx/minis/clodsire_mask.1bpp.lz"
 ClodsireIcon::     INCBIN "gfx/icons/clodsire.2bpp.lz"
 
-SECTION "Annihilape Mini Icon", ROMX
-AnnihilapeMini::     INCBIN "gfx/minis/annihilape.2bpp.lz"
-AnnihilapeMiniMask:: INCBIN "gfx/minis/annihilape_mask.1bpp.lz"
-AnnihilapeIcon::     INCBIN "gfx/icons/annihilape.2bpp.lz"
+SECTION "Monkey Mini Icon", ROMX
+MonkeyMini::     INCBIN "gfx/minis/monkey.2bpp.lz"
+MonkeyMiniMask:: INCBIN "gfx/minis/monkey_mask.1bpp.lz"
+MonkeyIcon::     INCBIN "gfx/icons/monkey.2bpp.lz"
 
 SECTION "UnownB Mini Icon", ROMX
 UnownBMini::     INCBIN "gfx/minis/unown_b.2bpp.lz"

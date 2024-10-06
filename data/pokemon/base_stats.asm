@@ -325,7 +325,7 @@ INCLUDE "data/pokemon/base_stats/overqwil.asm"
 INCLUDE "data/pokemon/base_stats/dudunsparce.asm"
 INCLUDE "data/pokemon/base_stats/farigiraf.asm"
 INCLUDE "data/pokemon/base_stats/clodsire.asm"
-INCLUDE "data/pokemon/base_stats/annihilape.asm"
+INCLUDE "data/pokemon/base_stats/monkey.asm"
 	assert_table_length NUM_SPECIES
 
 INCLUDE "data/pokemon/base_stats/gyarados.asm" ; red

@@ -294,7 +294,7 @@ PokemonPicPointers::
 	pics DudunsparceTwoSegment
 	pics Farigiraf
 	pics Clodsire
-	pics Annihilape
+	pics Monkey
 	assert_table_length NUM_SPECIES
 
 	pics UnownB

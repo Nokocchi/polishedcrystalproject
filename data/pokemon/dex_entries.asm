@@ -2885,15 +2885,11 @@ ClodsirePokedexEntry::
 	next "its body. It's a"
 	next "risky move.@"
 
-SECTION "AnnihilapePokedexEntry", ROMX
-AnnihilapePokedexEntry::
-	db "Rage Monkey@"
-	db   "When its anger"
-	next "rose beyond a cri-"
-	next "tical point, it"
-	page "gained power unfe-"
-	next "ttered by its"
-	next "physical body.@"
+SECTION "MonkeyPokedexEntry", ROMX
+MonkeyPokedexEntry::
+	db "Monkey@"
+	db   "I don't think this"
+	next "is a #mon..?@"
 
 SECTION "GyaradosRedPokedexEntry", ROMX
 GyaradosRedPokedexEntry::

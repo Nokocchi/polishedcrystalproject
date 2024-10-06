@@ -1255,7 +1255,7 @@ MankeyEvosAttacks:
 	db -1 ; no more level-up moves
 
 PrimeapeEvosAttacks:
-	evo_data EVOLVE_MOVE, OUTRAGE, ANNIHILAPE
+	evo_data EVOLVE_MOVE, OUTRAGE, MONKEY
 	db -1 ; no more evolutions
 	db 1, OUTRAGE
 	db 1, RAGE
@@ -6496,7 +6496,7 @@ ClodsireEvosAttacks:
 	db 53, GUNK_SHOT ; Sludge Wave → similar move
 	db -1 ; no more level-up moves
 
-AnnihilapeEvosAttacks:
+MonkeyEvosAttacks:
 	db -1 ; no more evolutions
 	db 1, SHADOW_CLAW ; Shadow Punch → similar move ; evolution move
 	db 1, OUTRAGE

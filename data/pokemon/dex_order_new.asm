@@ -148,7 +148,7 @@ NewPokedexOrder:
 	dp DUGTRIO
 	dp MANKEY
 	dp PRIMEAPE
-	dp ANNIHILAPE
+	dp MONKEY
 	dp MEOWTH
 	dp PERSIAN
 	dp PERRSERKER

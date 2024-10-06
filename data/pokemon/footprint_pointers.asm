@@ -290,7 +290,7 @@ FootprintPointers::
 	dw DudunsparceFootprint
 	dw FarigirafFootprint
 	dw ClodsireFootprint
-	dw AnnihilapeFootprint
+	dw MonkeyFootprint
 	assert_table_length NUM_SPECIES
 
 	dw GyaradosFootprint

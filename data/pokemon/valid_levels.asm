@@ -291,5 +291,5 @@ ValidPokemonLevels: ; for Wonder Trade
 	db  32, 100 ; Dudunsparce
 	db  32, 100 ; Farigiraf
 	db  20, 100 ; Clodsire
-	db  56, 100 ; Annihilape
+	db  56, 100 ; Monkey
 	assert_table_length NUM_SPECIES

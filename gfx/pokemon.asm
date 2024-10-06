@@ -1509,9 +1509,9 @@ SECTION "Clodsire Pics", ROMX
 ClodsireFrontpic: INCBIN "gfx/pokemon/clodsire/front.animated.2bpp.lz"
 ClodsireBackpic:  INCBIN "gfx/pokemon/clodsire/back.2bpp.lz"
 
-SECTION "Annihilape Pics", ROMX
-AnnihilapeFrontpic: INCBIN "gfx/pokemon/annihilape/front.animated.2bpp.lz"
-AnnihilapeBackpic:  INCBIN "gfx/pokemon/annihilape/back.2bpp.lz"
+SECTION "Monkey Pics", ROMX
+MonkeyFrontpic: INCBIN "gfx/pokemon/monkey/front.animated.2bpp.lz"
+MonkeyBackpic:  INCBIN "gfx/pokemon/monkey/back.2bpp.lz"
 
 SECTION "SneaselPlain Pics", ROMX
 SneaselPlainFrontpic: INCBIN "gfx/pokemon/sneasel_plain/front.animated.2bpp.lz"

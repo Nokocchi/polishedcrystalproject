@@ -290,7 +290,7 @@ AnimationExtraPointers:
 	dw DudunsparceTwoSegmentAnimationExtra
 	dw FarigirafAnimationExtra
 	dw ClodsireAnimationExtra
-	dw AnnihilapeAnimationExtra
+	dw MonkeyAnimationExtra
 	assert_table_length NUM_SPECIES
 
 	dw UnownBAnimationExtra
