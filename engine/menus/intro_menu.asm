@@ -594,10 +594,10 @@ ProfElmSpeech:
 	call GetCGBLayout
 	call InitIntroGradient
 	call Intro_RotatePalettesLeftFrontpic
-
+if !DEF(DEBUG) ; Used to be just below PrintText
 	ld hl, ElmText1
 	call PrintText
-if !DEF(DEBUG)
+
 	ld c, 15
 	call FadeToWhite
 	call ClearTileMap
