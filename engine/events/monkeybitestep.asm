@@ -32,7 +32,7 @@ Script_ShowMessage:
 TEEEEEXT:
 	text "Your monkey bite"
 	line "Is infected! You"
-	cont "feel sick.."
+	cont "feel sick..."
 	done
 
 LoadInfectedBGPals:
