@@ -75,6 +75,7 @@ TalkToMonkeyWhenFollow:
 	applymovement MONKEY_FOLLOW, Movement_MonkeyRunAway
 	disappear MONKEY_FOLLOW
 	showtext Text_InfectedBiteReaction
+	setevent EVENT_MONKEY_BITE_INFECTED
 	end
 
 Movement_WalkAwayFromMonkey:

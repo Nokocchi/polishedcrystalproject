@@ -1280,11 +1280,10 @@ wBattlePointsEnd::
 
 wStepCount:: db
 wPoisonStepCount:: db
+wMonkeyBiteStepCount:: db
 
 wPhoneList:: flag_array NUM_PHONE_CONTACTS
 wPhoneListEnd::
-
-	ds 1 ; unused
 
 wParkBallsRemaining::
 wSafariBallsRemaining:: db

@@ -10,6 +10,8 @@ writetext:
 far...
 	- Do stuff with other banks
 
+wPartyMon1DVs etc is actually wPartyMon{d:n}xxxx. 
+
 
 Water, yellow, roof and text are special colors.
 - Lightest color of water cycles, yellow glows at night, roof is blue indoors and changes with time of day, text is reserved
@@ -19,3 +21,18 @@ Tiles $60 to $7F or $E0 to $FF are used for text and not map tiles.
 But can be changes so that all 255 can be used
 4x4 tiles can be used to build blocks. 
 Tiles from $0:01 to $0:80 can be animated
+
+scall = call
+call is used when calling assembly from assembly
+scall is used when calling mapscript from mapscript
+callasm is used when calling assembly from mapscript
+Callscript is used when calling mapscript from assembly
+
+farwritetext is used when writing text, but the text is stored in a different bank (common.asm)
+
+Maybe?
+Events are set to 0 by default. If you define them in initialize_events.asm, they are initialized as 1.
+If an event is connected to an object, the object is shown if event is 0, and object is hidden if event is 1.
+So initializing an event sets it to 1, which hides the object. 
+appear sprite => set event to 0
+disappear sprite => set event to 1 

@@ -77,6 +77,7 @@ EnterMap:
 	jr nz, .dontresetpoison
 	xor a
 	ld [wPoisonStepCount], a
+	ld [wMonkeyBiteStepCount], a
 .dontresetpoison
 
 	xor a ; end map entry
@@ -927,8 +928,10 @@ CountStep:
 	call DoRepelStep
 	jr c, .doscript
 
-	; Count the step for poison and total steps
+	; Count the step for poison, monkey bite and total steps
 	ld hl, wPoisonStepCount
+	inc [hl]
+	ld hl, wMonkeyBiteStepCount
 	inc [hl]
 	ld hl, wStepCount
 	inc [hl]
@@ -952,6 +955,16 @@ CountStep:
 	; Increase the EXP of (both) DayCare Pokemon by 1.
 	farcall DayCareStep
 
+	ld hl, wMonkeyBiteStepCount
+	ld a, [hl]
+	cp 5
+	jr c, .skip_monkey_bite
+	ld [hl], 0
+
+	farcall DoMonkeyBiteStep
+	jr c, .doscript
+
+.skip_monkey_bite
 	; Every four steps, deal damage to all Poisoned Pokemon
 	ld hl, wPoisonStepCount
 	ld a, [hl]
