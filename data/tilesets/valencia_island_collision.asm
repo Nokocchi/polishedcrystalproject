@@ -58,3 +58,4 @@
 	tilecoll WATER, WATER, WATER, WATER ; 39
 	tilecoll TOP_WALL, WALL, FLOOR, FLOOR ; 3a
 	tilecoll FLOOR, FLOOR, FLOOR, WARP_CARPET_DOWN ; 3b
+	tilecoll WALL, WALL, WALL, WALL ; 3c

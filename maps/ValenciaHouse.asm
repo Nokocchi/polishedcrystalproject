@@ -12,7 +12,42 @@ ValenciaHouse_MapScriptHeader:
 	def_bg_events
 
 	def_object_events
-	object_event  2,  3, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, ValenciaHouseLassText, -1
+	object_event  2,  3, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, PAL_NPC_RED, OBJECTTYPE_SCRIPT, 0, ValenciaHouseMonkeyBiteHealerScript, -1
+
+ValenciaHouseMonkeyBiteHealerScript:
+	faceplayer
+	opentext
+	checkevent EVENT_MONKEY_BITE_INFECTED 
+	iffalse_jumptext MonkeyBiteAlreadyTreatedText
+	writetext MonkeyBiteLooksInfectedText
+	special SaveMusic
+	playmusic MUSIC_NONE
+	pause 30
+	special RestoreMusic
+	clearevent EVENT_MONKEY_BITE_INFECTED
+	end
+
+MonkeyBiteAlreadyTreatedText:
+	text "I hope you are"
+	line "feeling better!"
+	done
+
+MonkeyBiteLooksInfectedText:
+	text "Oh my gosh! You"
+	line "look awful! What"
+	cont "happened to you?"
+
+	para "You were bitten by"
+	line "a monkey?"
+	cont "Like, a Mankey?"
+	
+	para "Just a regular"
+	line "monkey? Huh.."
+
+	para "Rest here for the"
+	line "night. The village"
+	cont "doctor can help"
+	done
 
 ValenciaHouseLassText:
 	text "Prof.Ivy is really"
