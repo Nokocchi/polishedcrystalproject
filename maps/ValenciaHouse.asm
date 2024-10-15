@@ -16,10 +16,10 @@ ValenciaHouse_MapScriptHeader:
 
 ValenciaHouseMonkeyBiteHealerScript:
 	faceplayer
+	checkevent EVENT_MONKEY_BITE_INFECTED
+	iffalse_jumptext MonkeyBiteAlreadyTreatedText 
 	opentext
-	checkevent EVENT_MONKEY_BITE_INFECTED 
-	iffalse_jumptext MonkeyBiteAlreadyTreatedText
-	writetext MonkeyBiteLooksInfectedText
+	writetext MonkeyBiteLooksInfectedText ; nTODO: The textbox hangs and immediately skips to the already treated text
 	special SaveMusic
 	playmusic MUSIC_NONE
 	pause 30

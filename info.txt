@@ -30,9 +30,13 @@ Callscript is used when calling mapscript from assembly
 
 farwritetext is used when writing text, but the text is stored in a different bank (common.asm)
 
-Maybe?
 Events are set to 0 by default. If you define them in initialize_events.asm, they are initialized as 1.
 If an event is connected to an object, the object is shown if event is 0, and object is hidden if event is 1.
 So initializing an event sets it to 1, which hides the object. 
 appear sprite => set event to 0
 disappear sprite => set event to 1 
+
+You can see which bank different files are in, if you check main.asm
+
+Event flag vs engine flag:
+https://discord.com/channels/442462691542695948/487424856913346580/1264693315400499291
