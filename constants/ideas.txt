@@ -11,16 +11,15 @@ x He gives it to you for free, says he needs to get it off his hands, and he run
 x Turns out, it's just a normal monkey (Add monkey pokemon)
 x A cutscene plays: You try to leave it, but it follows you. You walk, it follows, you look back, it pretends to look the other way.. You start running, it starts running, and eventually it bites you
 x You are now infected and need an antidote. The monkey runs off
-The screen flashes, maybe green hue? 
-You stumble across a jungle hut where a woman makes an antidote for you.
-Extra: You have nightmares of the monkey biting you
-when you wake up, that is when you get infected 
-You feel better.
+x The screen flashes, maybe green hue? 
+x You stumble across a jungle hut where a woman makes an antidote for you.
+Extra: You have nightmares of the monkey biting you?
+when you wake up, that is when you get infected?
 She requests that you go out and find an item for her as a reward. 
-She lends you her Seaking so you can get up the waterfall and back home again. Some kind of one-way thing at the top of the waterfall where you give the Seaking back
-Your home town is at the top of the cliff
 You are now home and can talk to professor
 The jungle valley overflows and allows you to go new places with surf. You fix it in the wastewater treatment facility
+West passage from Jungle Valley is blocked to begin with, but accessible during flooding. Afterwards, maybe a big rock will be carried away by flood and stuck in the water in the Jungle Valley so the west passage is accessible permanently.
+A town with a river running through it, with little bridges and houses next to the river. Maybe ecruteak style tilemaps?
 
 You are incapacitated for some reason, and your pokemon needs to go out and find medicine for you, or save you. Maybe you get stuck in a cave and you throw your pokeball through a small crack to go and get help, and then you control the pokemon.
 Spooky guy who calls you on your phone, asks to meet up. Some kind of trainer battle maybe? 

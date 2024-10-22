@@ -78,6 +78,11 @@ TalkToMonkeyWhenFollow:
 	setevent EVENT_MONKEY_BITE_INFECTED
 	end
 
+RemoveMonkeyFromParty:
+	xor a ; REMOVE_PARTY
+	ld [wPokemonWithdrawDepositParameter], a
+	predef_jump RemoveMonFromParty
+
 Movement_WalkAwayFromMonkey:
 	slow_step_left
 	slow_step_left

@@ -17,17 +17,40 @@ ValenciaHouse_MapScriptHeader:
 ValenciaHouseMonkeyBiteHealerScript:
 	faceplayer
 	checkevent EVENT_MONKEY_BITE_INFECTED
-	iffalse_jumptext MonkeyBiteAlreadyTreatedText 
+	iffalsefwd .GiveSeaking
 	opentext
-	writetext MonkeyBiteLooksInfectedText ; nTODO: The textbox hangs and immediately skips to the already treated text
-	special SaveMusic
+	writetext MonkeyBiteLooksInfectedText
+	special SaveMusic ;nTODO: This music and pause doesn't work too well. Fix it
 	playmusic MUSIC_NONE
 	pause 30
+	closetext
 	special RestoreMusic
 	clearevent EVENT_MONKEY_BITE_INFECTED
+	sjumpfwd .End
+.GiveSeaking:
+	checkevent EVENT_WATERFALL_SEAKING_RECEIVED
+	iftruefwd .SeakingAlreadyReceived
+	opentext 
+	writetext GiveSeakingText
+	promptbutton
+	setevent EVENT_WATERFALL_SEAKING_RECEIVED
+	setmapscene JUNGLE_VALLEY, $1
+	closetext
+	sjumpfwd .End
+.SeakingAlreadyReceived:
+	opentext 
+	writetext SeakingAlreadyReceivedText
+	promptbutton
+	closetext
+.End:
 	end
 
-MonkeyBiteAlreadyTreatedText:
+GiveSeakingText:
+	text "Here, take my"
+	line "Seaking!"
+	done
+
+SeakingAlreadyReceivedText:
 	text "I hope you are"
 	line "feeling better!"
 	done

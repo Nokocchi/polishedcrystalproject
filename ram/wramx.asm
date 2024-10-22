@@ -1087,7 +1087,7 @@ wMahoganyMart1FSceneID:: db
 wMahoganyTownSceneID:: db
 wMountMoon1FSceneID:: db
 wMrPokemonsHouseSceneID:: db
-wMystriStageSceneID:: db
+wJungleValleySceneID:: db
 wValenciaPortTownSceneID:: db
 wOlivineCitySceneID:: db
 wOlivinePortSceneID:: db
