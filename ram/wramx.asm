@@ -1108,7 +1108,7 @@ wRoute36SceneID:: db
 wRoute42SceneID:: db
 wRoute43GateSceneID:: db
 wRoute47SceneID:: db
-wRoute48SceneID:: db
+wRoute49SceneID:: db
 wRuinsOfAlphAerodactylChamberSceneID:: db
 wRuinsOfAlphHoOhChamberSceneID:: db
 wRuinsOfAlphInnerChamberSceneID:: db

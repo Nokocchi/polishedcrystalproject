@@ -76,12 +76,15 @@ TalkToMonkeyWhenFollow:
 	disappear MONKEY_FOLLOW
 	showtext Text_InfectedBiteReaction
 	setevent EVENT_MONKEY_BITE_INFECTED
+	callasm RemoveMonkeyFromParty
 	end
 
 RemoveMonkeyFromParty:
 	xor a ; REMOVE_PARTY
+	ld [wCurPartyMon], a
 	ld [wPokemonWithdrawDepositParameter], a
-	predef_jump RemoveMonFromParty
+	predef RemoveMonFromParty
+	ret
 
 Movement_WalkAwayFromMonkey:
 	slow_step_left

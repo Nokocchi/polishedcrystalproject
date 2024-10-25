@@ -80,7 +80,7 @@ MapScenes::
 	scene_var ROUTE_42,                               wRoute42SceneID
 	scene_var ROUTE_43_GATE,                          wRoute43GateSceneID
 	scene_var ROUTE_47,                               wRoute47SceneID
-	scene_var ROUTE_48,                               wRoute48SceneID
+	scene_var ROUTE_49,                               wRoute49SceneID
 	scene_var RUGGED_ROAD_SOUTH,                      wRuggedRoadSouthSceneID
 	scene_var RUINS_OF_ALPH_AERODACTYL_CHAMBER,       wRuinsOfAlphAerodactylChamberSceneID
 	scene_var RUINS_OF_ALPH_HO_OH_CHAMBER,            wRuinsOfAlphHoOhChamberSceneID

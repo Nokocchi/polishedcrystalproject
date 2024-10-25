@@ -1,7 +1,7 @@
 Maybe the game starts with a black screen that explains what happened
 A cutscene of the player crawling on a cliffside under the hometown
 x You start the game in a cave, in a jungle
-It's night, and rainy, with thunder
+It's night, and rainy, with thunder (check azalea, maybe lake of rage, they have rain?)
 You were out climbing/hiking and fell down a cliff
 You stayed the night in the cave (is it possible to do a fire animation thing? Campfire)
 x You have no pokemon

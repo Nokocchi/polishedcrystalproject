@@ -107,7 +107,7 @@ EngineFlags:
 	engine_flag wVisitedSpawns, SPAWN_SNOWTOP
 	engine_flag wVisitedSpawns, SPAWN_MAHOGANY
 	engine_flag wVisitedSpawns, SPAWN_YELLOW_FOREST
-	engine_flag wVisitedSpawns, SPAWN_LAKE_OF_RAGE
+	engine_flag wVisitedSpawns, SPAWN_ROUTE_49
 	engine_flag wVisitedSpawns, SPAWN_BLACKTHORN
 	engine_flag wVisitedSpawns, SPAWN_MT_SILVER
 	engine_flag wVisitedSpawns, SPAWN_SHAMOUTI

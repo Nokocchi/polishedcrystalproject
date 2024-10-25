@@ -40,3 +40,23 @@ You can see which bank different files are in, if you check main.asm
 
 Event flag vs engine flag:
 https://discord.com/channels/442462691542695948/487424856913346580/1264693315400499291
+
+predef:
+farcall on steroids. Farcall just uses the registers, and if you need more than 3 registers, you need to use predef. It stores everything on the stack
+Engezerstorung — 09/25/2024 9:49 PM
+
+
+???
+fix_facing
+
+callback
+MAPCALLBACK_OBJECTS = Do stuff with objects, sprites on map load, often based on events. Seems like it runs before the objects are really shown, and you cannot do things like applymovement?
+MAPCALLBACK_NEWMAP = Do stuff first time the map is loaded
+MAPCALLBACK_TILES = ???
+MAPCALLBACK_STONETABLE = ???
+
+Scene_scripts:
+Runs over and over again as long as the map is in that particular scene
+
+sdefer = Only meant to be used in scene scripts. Used to be called prioritysjump.
+Runs the subroutine after the current subroutine is done ?

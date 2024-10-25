@@ -50,7 +50,7 @@ LakeOfRage_MapScriptHeader:
 	const LAKEOFRAGE_WESLEY
 
 LakeOfRageFlyPoint:
-	setflag ENGINE_FLYPOINT_LAKE_OF_RAGE
+	setflag ENGINE_FLYPOINT_ROUTE_49 ; was lake of rage
 	endcallback
 
 LakeOfRageWesleyAndEngineer:

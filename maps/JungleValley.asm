@@ -48,8 +48,13 @@ SeakingScript:
 	applymovement WATERFALL_SEAKING, Movement_SeakingSwimUp
 	special FadeOutPalettes
 	disappear WATERFALL_SEAKING
-	warp ROUTE_49,  32, 14
+	warpfacing LEFT, ROUTE_49, 30, 17
 	end
+
+Movement_JumpOffSeaking:
+	jump_step_right
+	turn_head_left
+	step_end
 
 Movement_SeakingReadyForJump:
 	step_right

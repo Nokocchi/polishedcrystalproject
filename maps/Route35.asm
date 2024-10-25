@@ -175,7 +175,7 @@ TrainerBug_catcherArnie1:
 	checkflag ENGINE_FLYPOINT_BLACKTHORN
 	iftruefwd .LoadFight2
 .Fight1:
-	checkflag ENGINE_FLYPOINT_LAKE_OF_RAGE
+	checkflag ENGINE_FLYPOINT_ROUTE_49 ; was lake of rage
 	iftruefwd .LoadFight1
 .LoadFight0:
 	loadtrainer BUG_CATCHER, ARNIE1
