@@ -25,3 +25,5 @@ You are incapacitated for some reason, and your pokemon needs to go out and find
 Spooky guy who calls you on your phone, asks to meet up. Some kind of trainer battle maybe? 
 Could be cool to add a trick house like in RSE
 Push rocket grunt into a hole with Strength and walk over him
+Some kind of panning like in SnowtopMountainOutside
+Water and puddle "raindrop" animations during rain

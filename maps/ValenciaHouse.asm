@@ -26,6 +26,7 @@ ValenciaHouseMonkeyBiteHealerScript:
 	closetext
 	special RestoreMusic
 	clearevent EVENT_MONKEY_BITE_INFECTED
+	setevent EVENT_MONKEY_BITE_HEALED_NEW_DAY
 	sjumpfwd .End
 .GiveSeaking:
 	checkevent EVENT_WATERFALL_SEAKING_RECEIVED

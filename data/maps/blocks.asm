@@ -1613,10 +1613,18 @@ LightningIslandRoof_BlockData:
 SECTION "JungleValley_BlockData", ROMX
 JungleValley_BlockData:
 	INCBIN "maps/JungleValley.ablk.lz"
+	
+SECTION "JungleValleyRaining_BlockData", ROMX
+JungleValleyRaining_BlockData:
+	INCBIN "maps/JungleValleyRaining.ablk.lz"
 
 SECTION "ValenciaPort_BlockData", ROMX
 ValenciaPort_BlockData:
 	INCBIN "maps/ValenciaPort.ablk.lz"
+
+SECTION "ValenciaPortRaining_BlockData", ROMX
+ValenciaPortRaining_BlockData:
+	INCBIN "maps/ValenciaPortRaining.ablk.lz"
 
 SECTION "IvysLab_BlockData", ROMX
 IvysLab_BlockData:

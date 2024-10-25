@@ -80,6 +80,7 @@ DEF NUM_FISHGROUPS EQU const_value
 	const NOT_OVERCAST
 	const AZALEA_OVERCAST
 	const LAKE_OF_RAGE_OVERCAST
+	const JUNGLE_VALLEY_OVERCAST
 	const STORMY_BEACH_OVERCAST
 
 ; SpawnPoints indexes (see data/maps/spawn_points.asm)

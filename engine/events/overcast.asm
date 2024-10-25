@@ -7,6 +7,8 @@ GetOvercastIndex::
 	jr z, .lake_of_rage_route_43
 	cp GROUP_STORMY_BEACH ; GROUP_GOLDENROD_CITY, GROUP_MAGNET_TUNNEL_WEST, GROUP_ROUTE_34, GROUP_ROUTE_34_COAST
 	jr z, .stormy_beach_goldenrod_city_route_34
+	cp GROUP_JUNGLE_VALLEY 
+	jr z, .jungle_valley_maps
 .not_overcast:
 	xor a ; NOT_OVERCAST
 	ret
@@ -32,6 +34,19 @@ GetOvercastIndex::
 	jr z, .not_overcast
 	ld a, AZALEA_OVERCAST
 	ret
+
+.jungle_valley_maps:
+	ld a, [wMapNumber]
+	cp MAP_VALENCIA_PORT
+	jr z, .valencia_overcast
+	cp MAP_JUNGLE_VALLEY
+	jr nz, .not_overcast
+.valencia_overcast:
+	eventflagcheck EVENT_MONKEY_BITE_HEALED_NEW_DAY
+	jr nz, .not_overcast
+	ld a, JUNGLE_VALLEY_OVERCAST
+	ret
+
 
 .lake_of_rage_route_43:
 ; Lake of Rage and Route 43

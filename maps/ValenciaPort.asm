@@ -2,6 +2,7 @@ ValenciaPort_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
+	callback MAPCALLBACK_TILES, ValenciaPortRainScript
 
 	def_warp_events
 	warp_event 25, 17, NEW_PLAYER_HOME_2F, 1
@@ -22,6 +23,15 @@ ValenciaPort_MapScriptHeader:
 	object_const_def
 	const SUSPICIOUS_MAN
 	const MONKEY_FOLLOW
+
+ValenciaPortRainScript:
+	special Special_GetOvercastIndex
+	ifequalfwd JUNGLE_VALLEY_OVERCAST, .rain
+	changemapblocks ValenciaPort_BlockData
+	endcallback
+.rain
+	changemapblocks ValenciaPortRaining_BlockData
+	endcallback
 
 ValenciaPort_SuspiciousGuyTrigger0a:
 ValenciaPort_SuspiciousGuyTrigger0b:

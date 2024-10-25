@@ -3,6 +3,7 @@ JungleValley_MapScriptHeader:
 
 	def_callbacks
 	callback MAPCALLBACK_NEWMAP, JungleValleyFlyPoint
+	callback MAPCALLBACK_TILES, JungleValleyRainScript
 
 	def_warp_events
 	warp_event 15,  5, IVYS_LAB, 1
@@ -21,22 +22,37 @@ JungleValley_MapScriptHeader:
 
 	def_object_events
 	object_event  9,  8, SPRITE_COOL_DUDE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, JungleValleyCooltrainermText, -1
-	object_event 21,  5, SPRITE_MONKEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeakingScript, EVENT_SEAKING_AT_WATERFALL
+	object_event 20,  8, SPRITE_MONKEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeakingScript, EVENT_SEAKING_AT_WATERFALL
 
 	object_const_def
 	const COOLDUDE
 	const WATERFALL_SEAKING
+
+JungleValleyRainScript:
+	special Special_GetOvercastIndex
+	ifequalfwd JUNGLE_VALLEY_OVERCAST, .rain
+	changemapblocks JungleValley_BlockData
+	endcallback
+.rain
+	changemapblocks JungleValleyRaining_BlockData
+	endcallback
+
 
 JungleValleyFlyPoint:
 	setflag ENGINE_FLYPOINT_VALENCIA
 	endcallback
 
 SeakingWaterfallScript1:
-	moveobject WATERFALL_SEAKING, 19, 4
+	moveobject WATERFALL_SEAKING, 21, 4
+	sjumpfwd SeakingArrivesScript
 SeakingWaterfallScript2:
+	moveobject WATERFALL_SEAKING, 21, 5
+	sjumpfwd SeakingArrivesScript
+SeakingArrivesScript:
 	turnobject PLAYER, RIGHT
 	appear WATERFALL_SEAKING
 	applymovement WATERFALL_SEAKING, Movement_SeakingSwimDown
+	moveobject WATERFALL_SEAKING, 20, 8 ;Has no effect on a visible sprite, but will position it correctly in case the player walks away and comes back without reloading the map
 	setscene $2
 	end
 
