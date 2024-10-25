@@ -675,7 +675,7 @@ ENDM
 	map_const SAFARI_ZONE_WEST_REST_HOUSE_2,               4,  4 ;  9
 
 	newgroup                                                     ; 33
-	map_const JUNGLE_VALLEY,                              14, 12 ;  1
+	map_const JUNGLE_VALLEY,                              15, 12 ;  1
 	map_const ROUTE_49,                                   20, 11 ;  2
 	map_const IVYS_LAB,                                    5,  6 ;  3
 	map_const IVYS_HOUSE,                                  4,  4 ;  4

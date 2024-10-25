@@ -5,23 +5,23 @@ JungleValley_MapScriptHeader:
 	callback MAPCALLBACK_NEWMAP, JungleValleyFlyPoint
 
 	def_warp_events
-	warp_event 13,  5, IVYS_LAB, 1
-	warp_event 11,  2, IVYS_HOUSE, 1
-	warp_event  5, 11, VALENCIA_HOUSE, 1
+	warp_event 15,  5, IVYS_LAB, 1
+	warp_event 13,  2, IVYS_HOUSE, 1
+	warp_event  7, 11, VALENCIA_HOUSE, 1
 
 	def_coord_events
-	coord_event  17, 8, 1, SeakingWaterfallScript1
-	coord_event  17, 9, 1, SeakingWaterfallScript2
+	coord_event 19,  8, 1, SeakingWaterfallScript1
+	coord_event 19,  9, 1, SeakingWaterfallScript2
 
 	def_bg_events
-	bg_event  8,  8, BGEVENT_JUMPTEXT, JungleValleySignText
-	bg_event 11,  5, BGEVENT_JUMPTEXT, VillageDoctorSignText
-	bg_event 18, 19, BGEVENT_JUMPTEXT, JungleValleyLockedDoorText
-	bg_event 15, 19, BGEVENT_JUMPTEXT, PumpStationSignText
+	bg_event 10,  8, BGEVENT_JUMPTEXT, JungleValleySignText
+	bg_event 13,  5, BGEVENT_JUMPTEXT, VillageDoctorSignText
+	bg_event 20, 19, BGEVENT_JUMPTEXT, JungleValleyLockedDoorText
+	bg_event 17, 19, BGEVENT_JUMPTEXT, PumpStationSignText
 
 	def_object_events
-	object_event  7,  8, SPRITE_COOL_DUDE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, JungleValleyCooltrainermText, -1
-	object_event 19, 5, SPRITE_MONKEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeakingScript, EVENT_SEAKING_AT_WATERFALL
+	object_event  9,  8, SPRITE_COOL_DUDE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, JungleValleyCooltrainermText, -1
+	object_event 21,  5, SPRITE_MONKEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeakingScript, EVENT_SEAKING_AT_WATERFALL
 
 	object_const_def
 	const COOLDUDE

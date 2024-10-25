@@ -412,15 +412,15 @@ ENDM
 	map_attributes RockyBeach, ROCKY_BEACH, $35, SOUTH
 	connection south, ShamoutiIsland, SHAMOUTI_ISLAND, 0
 
-	map_attributes JungleValley, JUNGLE_VALLEY, $0, NORTH | EAST
-	connection north, Route49, ROUTE_49, -4
+	map_attributes JungleValley, JUNGLE_VALLEY, $45, NORTH | EAST
+	connection north, Route49, ROUTE_49, -3
 	connection east, ValenciaPort, VALENCIA_PORT, 5
 
-	map_attributes ValenciaPort, VALENCIA_PORT, $0, WEST
+	map_attributes ValenciaPort, VALENCIA_PORT, $45, WEST
 	connection west, JungleValley, JUNGLE_VALLEY, -5
 
-	map_attributes Route49, ROUTE_49, $0, SOUTH
-	connection south, JungleValley, JUNGLE_VALLEY, 4
+	map_attributes Route49, ROUTE_49, $35, SOUTH
+	connection south, JungleValley, JUNGLE_VALLEY, 3
 
 	map_attributes RuggedRoadNorth, RUGGED_ROAD_NORTH, $71, SOUTH
 	connection south, RuggedRoadSouth, RUGGED_ROAD_SOUTH, 0
