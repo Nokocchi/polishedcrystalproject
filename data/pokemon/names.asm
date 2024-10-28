@@ -291,5 +291,5 @@ PokemonNames::
 	rawchar "Dudunsparc"
 	rawchar "Farigiraf@"
 	rawchar "Clodsire@@"
-	rawchar "Monkey@@@@"
+	rawchar "monkey@@@@"
 	assert_table_length NUM_SPECIES + 1

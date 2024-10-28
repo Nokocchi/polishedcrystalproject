@@ -23,13 +23,13 @@ PlayPoisonSFX:
 
 Script_ShowMessage:
 	callasm PlayPoisonSFX
-	checkevent EVENT_MONKEY_BITE_INFECTED_MSG_SHOWN
+	checkevent EVENT_MONKEY_BITE_INFECTED_OVERWORLD_MSG_SHOWN
 	iftruefwd .ShowMsgEnd
 	opentext
 	writetext Text_BiteInfected
 	promptbutton
 	closetext
-	setevent EVENT_MONKEY_BITE_INFECTED_MSG_SHOWN
+	setevent EVENT_MONKEY_BITE_INFECTED_OVERWORLD_MSG_SHOWN
 .ShowMsgEnd:
 	end
 

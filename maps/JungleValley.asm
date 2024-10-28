@@ -50,13 +50,28 @@ SeakingWaterfallScript2:
 	sjumpfwd SeakingArrivesScript
 SeakingArrivesScript:
 	turnobject PLAYER, RIGHT
+	opentext
+	writetext Text_CallForSeaking_YesNo
+	yesorno
+	iffalsefwd .CloseText
+	showtext Text_CallForSeaking
+	wait 20
 	appear WATERFALL_SEAKING
 	applymovement WATERFALL_SEAKING, Movement_SeakingSwimDown
 	moveobject WATERFALL_SEAKING, 20, 8 ;Has no effect on a visible sprite, but will position it correctly in case the player walks away and comes back without reloading the map
 	setscene $2
+	sjumpfwd .End
+.CloseText
+	closetext
+.End
 	end
 
 SeakingScript:
+	opentext
+	writetext Text_JumpOntoSeaking_YesNo
+	yesorno
+	iffalsefwd .CloseText
+	closetext
 	applymovement WATERFALL_SEAKING, Movement_SeakingReadyForJump
 	pause 40
 	applymovement PLAYER, Movement_JumpOntoSeaking
@@ -65,6 +80,10 @@ SeakingScript:
 	special FadeOutPalettes
 	disappear WATERFALL_SEAKING
 	warpfacing LEFT, ROUTE_49, 30, 17
+	sjumpfwd .End
+.CloseText
+	closetext
+.End
 	end
 
 Movement_JumpOffSeaking:
@@ -96,6 +115,23 @@ Movement_JumpOntoSeaking:
 	jump_step_right
 	hide_object
 	step_end
+
+Text_JumpOntoSeaking_YesNo:
+	text "Jump onto Marnie"
+	line "and head home?"
+
+	para "You cannot go back"
+	line "to the Jungle Val-"
+	cont "ley again."
+	done
+
+Text_CallForSeaking:
+	text "MARNIE!!!"
+	done
+
+Text_CallForSeaking_YesNo:
+	text "Call for Marnie?"
+	done
 
 JungleValleyCooltrainermText:
 	text "I can eat six"

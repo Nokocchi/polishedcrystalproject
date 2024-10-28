@@ -1,7 +1,8 @@
 Maybe the game starts with a black screen that explains what happened
 A cutscene of the player crawling on a cliffside under the hometown
 x You start the game in a cave, in a jungle
-It's night, and rainy, with thunder (check azalea, maybe lake of rage, they have rain?)
+It's night, 
+x and rainy, with thunder (check azalea, maybe lake of rage, they have rain?)
 You were out climbing/hiking and fell down a cliff
 You stayed the night in the cave (is it possible to do a fire animation thing? Campfire)
 x You have no pokemon
@@ -14,7 +15,6 @@ x You are now infected and need an antidote. The monkey runs off
 x The screen flashes, maybe green hue? 
 x You stumble across a jungle hut where a woman makes an antidote for you.
 Extra: You have nightmares of the monkey biting you?
-when you wake up, that is when you get infected?
 She requests that you go out and find an item for her as a reward. 
 You are now home and can talk to professor
 The jungle valley overflows and allows you to go new places with surf. You fix it in the wastewater treatment facility

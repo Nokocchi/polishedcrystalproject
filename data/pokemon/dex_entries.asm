@@ -2887,7 +2887,7 @@ ClodsirePokedexEntry::
 
 SECTION "MonkeyPokedexEntry", ROMX
 MonkeyPokedexEntry::
-	db "Monkey@"
+	db "monkey@"
 	db   "I don't think this"
 	next "is a #mon..?@"
 

@@ -265,8 +265,8 @@ TilesetShamoutiAnim::
 TilesetValenciaAnim::
 	dw FarawayWaterFrames1, AnimateFarawayWaterTile
 	dw FarawayWaterFrames2, AnimateFarawayWaterTile
-	dw NULL,  DoNothing
-	dw NULL,  DoNothing
+	dw vTiles2 tile $64, AnimateRainPuddleTile
+	dw vTiles2 tile $4b, AnimateRainWaterTile
 	dw NULL,  DoNothing
 	dw NULL,  DoNothing
 	dw NULL,  DoNothing

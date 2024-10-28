@@ -51,7 +51,7 @@ fix_facing
 
 callback
 MAPCALLBACK_OBJECTS = Do stuff with objects, sprites on map load, often based on events. Seems like it runs before the objects are really shown, and you cannot do things like applymovement?
-MAPCALLBACK_NEWMAP = Do stuff first time the map is loaded
+MAPCALLBACK_NEWMAP = Do stuff first time the map is loaded. You cannot do movement or text here
 MAPCALLBACK_TILES = ???
 MAPCALLBACK_STONETABLE = ???
 
@@ -60,3 +60,8 @@ Runs over and over again as long as the map is in that particular scene
 
 sdefer = Only meant to be used in scene scripts. Used to be called prioritysjump.
 Runs the subroutine after the current subroutine is done ?
+
+
+
+applyonemovement PLAYER, skyfall_top	
+changeblock 8, 8, $25
