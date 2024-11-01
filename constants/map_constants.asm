@@ -592,7 +592,7 @@ ENDM
 	map_const CLIFF_EDGE_GATE,                            10, 11 ;  1
 	map_const CLIFF_CAVE,                                  6, 18 ;  2
 	map_const ROUTE_47,                                   39, 19 ;  3
-	map_const ROUTE_48,                                   18, 11 ;  4
+	map_const ROUTE_48,                                   21, 13 ;  4
 	map_const QUIET_CAVE_1F,                              18, 18 ;  5
 	map_const QUIET_CAVE_B1F,                             18, 18 ;  6
 	map_const QUIET_CAVE_B2F,                             18, 18 ;  7

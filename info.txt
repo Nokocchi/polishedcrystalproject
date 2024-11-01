@@ -65,3 +65,8 @@ Runs the subroutine after the current subroutine is done ?
 
 applyonemovement PLAYER, skyfall_top	
 changeblock 8, 8, $25
+	readmem wCurItem
+	setval BATON_PASS
+paired_step_right
+loadmem wFollowMovementQueue, movement_teleport_from
+object event SPRITE_MON_ICON => Use this for the monkey? What does it do?

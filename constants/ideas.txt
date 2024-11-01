@@ -20,6 +20,7 @@ You are now home and can talk to professor
 The jungle valley overflows and allows you to go new places with surf. You fix it in the wastewater treatment facility
 West passage from Jungle Valley is blocked to begin with, but accessible during flooding. Afterwards, maybe a big rock will be carried away by flood and stuck in the water in the Jungle Valley so the west passage is accessible permanently.
 A town with a river running through it, with little bridges and houses next to the river. Maybe ecruteak style tilemaps?
+A field with dried grass, yellow
 
 You are incapacitated for some reason, and your pokemon needs to go out and find medicine for you, or save you. Maybe you get stuck in a cave and you throw your pokeball through a small crack to go and get help, and then you control the pokemon.
 Spooky guy who calls you on your phone, asks to meet up. Some kind of trainer battle maybe? 

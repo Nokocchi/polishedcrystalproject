@@ -1,3 +1,7 @@
+;nTODO: Remove lightning - it messes up the monkey script
+; Talking to the monkey makes it walk towards you for some reason?
+; Walking with the monkey and having it follow you looks a bit weird. 
+
 ValenciaPort_MapScriptHeader:
 	def_scene_scripts
 
@@ -8,17 +12,20 @@ ValenciaPort_MapScriptHeader:
 	warp_event 25, 17, NEW_PLAYER_HOME_2F, 1
 
 	def_coord_events
-	coord_event 16, 14, 0, ValenciaPort_SuspiciousGuyTrigger0a
-	coord_event 16, 15, 0, ValenciaPort_SuspiciousGuyTrigger0b
+	coord_event 18, 14, 0, ValenciaPort_SuspiciousGuyTrigger0a
+	coord_event 18, 15, 0, ValenciaPort_SuspiciousGuyTrigger0b
 
-	coord_event 14, 14, 1, ValenciaPort_SuspiciousGuyTrigger1a
-	coord_event 14, 15, 1, ValenciaPort_SuspiciousGuyTrigger1b
+	coord_event 16, 14, 1, ValenciaPort_SuspiciousGuyTrigger1a
+	coord_event 16, 15, 1, ValenciaPort_SuspiciousGuyTrigger1b
+
+	coord_event 9, 14, 2, ValenciaPort_MonkeyAttacksTrigger
+	coord_event 9, 15, 2, ValenciaPort_MonkeyAttacksTrigger
 
 	def_bg_events
 
 	def_object_events
-	object_event 13, 12, SPRITE_SUSPICIOUS_MAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_VALENCIA_PORT_SUSPICIOUS_MAN
-	object_event 13, 14, SPRITE_MONKEY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TalkToMonkeyWhenFollow, EVENT_VALENCIA_PORT_MONKEY_FOLLOW
+	object_event 15, 12, SPRITE_SUSPICIOUS_MAN, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_VALENCIA_PORT_SUSPICIOUS_MAN
+	object_event 15, 14, SPRITE_MONKEY, SPRITEMOVEDATA_STANDING_UP, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, TalkToMonkeyWhenFollow, EVENT_VALENCIA_PORT_MONKEY_FOLLOW
 
 	object_const_def
 	const SUSPICIOUS_MAN
@@ -47,8 +54,6 @@ ValenciaPort_SuspiciousGuyTrigger1a:
 ValenciaPort_SuspiciousGuyTrigger1b:
 	showtext Text_SuspiciousManComeHere
 	applymovement PLAYER, Movement_GoToSuspiciousManB
-	sjumpfwd GiveMonkey
-
 GiveMonkey:
 	showtext Text_SuspiciousManSalesPitch
 	opentext
@@ -59,34 +64,63 @@ GiveMonkey:
 	disappear SUSPICIOUS_MAN
 	setscene $2
 	appear MONKEY_FOLLOW
+	wait 10
+	turnobject PLAYER, DOWN
 	follow PLAYER, MONKEY_FOLLOW
+	wait 5
+	showtext Text_ThatsNotAMankey
 	end
 
 TalkToMonkeyWhenFollow:
-	showtext Text_ThatsNotAMankey
-	stopfollow
-	applymovement PLAYER, Movement_WalkAwayFromMonkey
-	follow PLAYER, MONKEY_FOLLOW
-	applymovement PLAYER, Movement_WalkAwayFromMonkey
-	turnobject PLAYER, RIGHT
-	turnobject MONKEY_FOLLOW, RIGHT
-	showtext Text_QuestionMarks
-	applymovement PLAYER, Movement_WalkAwayFromMonkey
 	showemote EMOTE_QUESTION, PLAYER, 15
+	showtext Text_ThatsNotAMankey
+	end
+
+ValenciaPort_MonkeyAttacksTrigger:
 	turnobject PLAYER, RIGHT
+	showtext Text_DecideToLeaveMonkey
+	readvar VAR_YCOORD
+	ifequalfwd 14, .LeaveStraightLine
+	applyonemovement PLAYER, slow_step_up
+.LeaveStraightLine
+	applymovement PLAYER, Movement_SlowlyWalkLeft
+	showemote EMOTE_QUESTION, PLAYER, 15
+	wait 10
+	turnobject PLAYER, RIGHT
+	wait 10
 	turnobject MONKEY_FOLLOW, RIGHT
-	showtext Text_QuestionMarks
+	wait 10
+	showtext Text_UncomfortableWithTheMonkey
 	stopfollow
-	turnobject PLAYER, LEFT
-	applymovement MONKEY_FOLLOW, Movement_MonkeyRunAttack
-	playsound SFX_BITE
-	showemote EMOTE_SHOCK, PLAYER, 10
+	applymovement PLAYER, Movement_SlowlyUpAndToLeft
+	applymovement MONKEY_FOLLOW, Movement_QuickUpAndToLeft
+	showemote EMOTE_QUESTION, PLAYER, 10
+	wait 10
 	turnobject PLAYER, RIGHT
+	wait 10
+	turnobject MONKEY_FOLLOW, RIGHT
+	wait 10
+	showtext Text_MonkeyLooksAngry
+	applymovement PLAYER, Movement_RunUp
+	applymovement MONKEY_FOLLOW, Movement_RunLeftAndUp
+	turnobject PLAYER, DOWN
+	showemote EMOTE_SHOCK, PLAYER, 15
+	turnobject PLAYER, LEFT
+	wait 10
+	turnobject PLAYER, RIGHT
+	wait 10
+	turnobject PLAYER, UP
+	wait 10
+	playsound SFX_BITE
+	showemote EMOTE_SHOCK, PLAYER, 15
+	turnobject PLAYER, DOWN
+	wait 5
 	applymovement MONKEY_FOLLOW, Movement_MonkeyRunAway
 	disappear MONKEY_FOLLOW
 	showtext Text_InfectedBiteReaction
 	setevent EVENT_MONKEY_BITE_INFECTED
 	callasm RemoveMonkeyFromParty
+	setscene $3
 	end
 
 RemoveMonkeyFromParty:
@@ -96,25 +130,15 @@ RemoveMonkeyFromParty:
 	predef RemoveMonFromParty
 	ret
 
-Movement_WalkAwayFromMonkey:
-	slow_step_left
-	slow_step_left
-	step_end
-
-Movement_MonkeyRunAttack:
-	run_step_left
-	run_step_left
-	step_end
-
 Movement_MonkeyRunAway:
-	run_step_right
-	run_step_right
-	run_step_right
-	run_step_right
+	fast_jump_step_right
+	fast_jump_step_right
 	step_end
 
 Movement_SuspiciousManEscape:
 	run_step_left
+	run_step_down
+	run_step_down
 	run_step_left
 	run_step_left
 	run_step_left
@@ -131,8 +155,51 @@ Movement_GoToSuspiciousManB:
 	step_up
 	step_end
 
-Text_QuestionMarks:
-	text "?"
+Movement_SlowlyWalkLeft:
+	slow_step_left
+	slow_step_left
+	slow_step_left
+	step_end
+
+Movement_SlowlyUpAndToLeft:
+	slow_step_up
+	slow_step_left
+	slow_step_left
+	step_end
+
+Movement_QuickUpAndToLeft:
+	fast_step_left
+	fast_step_up
+	turn_head_left
+	step_end
+
+Movement_RunUp:
+	run_step_up
+	run_step_up
+	run_step_up
+	step_end
+
+Movement_RunLeftAndUp:
+	run_step_left
+	run_step_left
+	run_step_up
+	run_step_up
+	step_end
+
+Text_DecideToLeaveMonkey:
+	text "It's probably"
+	line "best to just leave"
+	cont "it here.."
+	done
+
+Text_UncomfortableWithTheMonkey:
+	text "The monkey is"
+	line "following you."
+	done
+
+Text_MonkeyLooksAngry:
+	text "The monkey looks"
+	line "angry.."
 	done
 
 Text_InfectedBiteReaction:

@@ -272,11 +272,15 @@ TilesetValenciaAnim::
 	dw NULL,  DoNothing
 	dw NULL,  DoNothing
 	dw NULL,  AnimateFlowerTile
+	dw vTiles2 tile $26, WriteTileToBuffer
 	dw NULL,  DoNothing
+	dw wTileAnimBuffer, ScrollTileDown
 	dw NULL,  DoNothing
+	dw wTileAnimBuffer, ScrollTileDown
 	dw NULL,  DoNothing
+	dw wTileAnimBuffer, ScrollTileDown
 	dw NULL,  DoNothing
-	dw NULL,  DoNothing
+	dw vTiles2 tile $26, ReadTileFromBuffer
 	dw NULL,  StandingTileFrame8
 	dw NULL,  DoneTileAnimation
 

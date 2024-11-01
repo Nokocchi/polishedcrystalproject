@@ -358,11 +358,10 @@ ENDM
 	connection north, Route10North, ROUTE_10_NORTH, 0
 	connection south, LavenderTown, LAVENDER_TOWN, 0
 
-	map_attributes Route47, ROUTE_47, $35, NORTH
-	connection north, Route48, ROUTE_48, 0
+	map_attributes Route47, ROUTE_47, $35, 0
 
-	map_attributes Route48, ROUTE_48, $35, SOUTH
-	connection south, Route47, ROUTE_47, 0
+	map_attributes Route48, ROUTE_48, $35, EAST
+	connection east, Route49, ROUTE_49, 5
 
 	map_attributes CherrygroveBay, CHERRYGROVE_BAY, $35, SOUTH | WEST | EAST
 	connection south, Route32Coast, ROUTE_32_COAST, 0
@@ -419,8 +418,9 @@ ENDM
 	map_attributes ValenciaPort, VALENCIA_PORT, $45, WEST
 	connection west, JungleValley, JUNGLE_VALLEY, -5
 
-	map_attributes Route49, ROUTE_49, $35, SOUTH
+	map_attributes Route49, ROUTE_49, $35, SOUTH | WEST
 	connection south, JungleValley, JUNGLE_VALLEY, 3
+	connection west, Route48, ROUTE_48, -5
 
 	map_attributes RuggedRoadNorth, RUGGED_ROAD_NORTH, $71, SOUTH
 	connection south, RuggedRoadSouth, RUGGED_ROAD_SOUTH, 0
