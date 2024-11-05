@@ -27,4 +27,5 @@ Spooky guy who calls you on your phone, asks to meet up. Some kind of trainer ba
 Could be cool to add a trick house like in RSE
 Push rocket grunt into a hole with Strength and walk over him
 Some kind of panning like in SnowtopMountainOutside
-Water and puddle "raindrop" animations during rain
+x Water and puddle "raindrop" animations during rain
+Somebody that you need to show pokemon to. It gets increasingly more difficult and you get better and better rewards? 

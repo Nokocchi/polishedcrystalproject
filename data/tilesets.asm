@@ -292,14 +292,14 @@ TilesetGameCornerAttr:: INCBIN "data/tilesets/game_corner_attributes.bin.lz"
 TilesetGameCornerColl:: INCBIN "data/tilesets/game_corner_collision.bin.lz"
 
 
-SECTION "Tileset Data - home_decor_store", ROMX
+SECTION "Tileset Data - spa", ROMX
 
-TilesetDecorGFX0:: INCBIN "gfx/tilesets/home_decor_store.2bpp.vram0.lz"
-TilesetDecorGFX1:: INCBIN "gfx/tilesets/home_decor_store.2bpp.vram1.lz"
+TilesetDecorGFX0:: INCBIN "gfx/tilesets/spa.2bpp.vram0.lz"
+TilesetDecorGFX1:: INCBIN "gfx/tilesets/spa.2bpp.vram1.lz"
 
-TilesetDecorMeta:: INCBIN "data/tilesets/home_decor_store_metatiles.bin.lz"
-TilesetDecorAttr:: INCBIN "data/tilesets/home_decor_store_attributes.bin.lz"
-TilesetDecorColl:: INCBIN "data/tilesets/home_decor_store_collision.bin.lz"
+TilesetDecorMeta:: INCBIN "data/tilesets/spa_metatiles.bin.lz"
+TilesetDecorAttr:: INCBIN "data/tilesets/spa_attributes.bin.lz"
+TilesetDecorColl:: INCBIN "data/tilesets/spa_collision.bin.lz"
 
 
 SECTION "Tileset Data - museum", ROMX

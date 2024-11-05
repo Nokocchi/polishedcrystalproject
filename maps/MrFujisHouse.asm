@@ -4,49 +4,71 @@ MrFujisHouse_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event  2,  7, LAVENDER_TOWN, 2
-	warp_event  3,  7, LAVENDER_TOWN, 2
+	warp_event  5, 17, ROUTE_48, 2
+	warp_event  6, 17, ROUTE_48, 2
 
 	def_coord_events
 
 	def_bg_events
 
 	def_object_events
-	object_event  4,  1, SPRITE_POKEMANIAC, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, MrFujisHouseSuperNerdText, -1
-	object_event  3,  4, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_WANDER, 1, 1, -1, -1, PAL_NPC_RED, OBJECTTYPE_COMMAND, jumptextfaceplayer, MrFujisHouseLassText, -1
-	pokemon_event  8,  4, PSYDUCK, SPRITEMOVEDATA_POKEMON, -1, -1, PAL_NPC_BROWN, MrFujisPsyduckText, -1
-	pokemon_event  5,  5, NIDORINO, SPRITEMOVEDATA_POKEMON, -1, -1, PAL_NPC_PURPLE, MrFujisNidorinoText, -1
-	pokemon_event  1,  3, PIDGEY, SPRITEMOVEDATA_POKEMON, -1, -1, PAL_NPC_BROWN, MrFujisPidgeyText, -1
+	object_event 2, 12, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_MrFujisHouse_Girl, -1
+	object_event 7, 13, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MrFujisHouseClerkScript, -1
+	pokemon_event  8, 6, PSYDUCK, SPRITEMOVEDATA_POKEMON, -1, -1, PAL_NPC_BROWN, Text_MrFujisHouse_Psyduck, -1
 
-MrFujisHouseSuperNerdText:
-	text "Mr.Fuji does live"
-	line "here, but he's not"
-	cont "home now."
+MrFujisHouseClerkScript:
+	opentext
+	writetext Text_MrFujisHouse_Clerk
+	yesorno
+	iffalsefwd .Refuse
+	closetext
+	special Special_FadeBlackQuickly
+	special Special_ReloadSpritesNoPalettes
+	playmusic MUSIC_HEAL
+	special HealParty
+	pause 60
+	special Special_FadeInQuickly
+	special RestartMapMusic
+	showtext Text_MrFujisHouse_ClerkHealed
+	sjumpfwd .End
+.Refuse
+	writetext Text_MrFujisHouse_ClerkRefuse
+	closetext
+.End
+	end
 
-	para "He might be at the"
-	line "House of Souls."
+Text_MrFujisHouse_ClerkHealed:
+	text "The soothing,"
+	line "fresh water healed"
+	cont "your #mon"
 	done
 
-MrFujisHouseLassText:
-	text "Some cold-hearted"
-	line "people stop caring"
-	cont "for their #mon."
-
-	para "Grandpa takes in"
-	line "the poor homeless"
-
-	para "#mon and takes"
-	line "care of them."
+Text_MrFujisHouse_ClerkRefuse:
+	text "I understand."
+	line "Please come again!"
 	done
 
-MrFujisPsyduckText:
+Text_MrFujisHouse_Girl:
+	text "Ah!! GET OUT!"
+	done
+
+Text_MrFujisHouse_Clerk:
+	text "This spa is very"
+	line "popular among the"
+	cont "locals."
+
+	para "But also for tired"
+	line "trainers passing"
+	cont "by."
+
+	para "Would you like to"
+	line "soak in the fresh"
+	cont "jungle water?"
+
+	para "It's super"
+	line "refreshing!"
+	done
+
+Text_MrFujisHouse_Psyduck:
 	text "Psyduck: Gu-guwa?"
-	done
-
-MrFujisNidorinoText:
-	text "Nidorino: Gyun!"
-	done
-
-MrFujisPidgeyText:
-	text "Pidgey: Pijji!"
 	done

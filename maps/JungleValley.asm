@@ -7,7 +7,6 @@ JungleValley_MapScriptHeader:
 
 	def_warp_events
 	warp_event 15,  5, IVYS_LAB, 1
-	warp_event 13,  2, IVYS_HOUSE, 1
 	warp_event  7, 11, VALENCIA_HOUSE, 1
 
 	def_coord_events
@@ -15,14 +14,16 @@ JungleValley_MapScriptHeader:
 	coord_event 19,  9, 1, SeakingWaterfallScript2
 
 	def_bg_events
-	bg_event 10,  8, BGEVENT_JUMPTEXT, JungleValleySignText
-	bg_event 13,  5, BGEVENT_JUMPTEXT, VillageDoctorSignText
-	bg_event 20, 19, BGEVENT_JUMPTEXT, JungleValleyLockedDoorText
-	bg_event 17, 19, BGEVENT_JUMPTEXT, PumpStationSignText
+	bg_event 10,  8, BGEVENT_JUMPTEXT, Text_JungleValley_Sign
+	bg_event 13,  5, BGEVENT_JUMPTEXT, Text_JungleValley_ProfRamonHouseSignText
+	bg_event 20, 19, BGEVENT_JUMPTEXT, Text_JungleValley_LockedDoorText
+	bg_event 17, 19, BGEVENT_JUMPTEXT, Text_JungleValley_PumpStationSign
 
 	def_object_events
-	object_event  9,  8, SPRITE_COOL_DUDE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, JungleValleyCooltrainermText, -1
+	object_event  9,  8, SPRITE_COOL_DUDE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_JungleValley_GuyText, -1
 	object_event 20,  8, SPRITE_MONKEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeakingScript, EVENT_SEAKING_AT_WATERFALL
+	object_event  4,  19, SPRITE_COOL_DUDE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_JungleValley_GuyRockBlockingRoad, -1
+	object_event  4,  19, SPRITE_COOL_DUDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_JungleValley_GuyLovingTown, -1
 
 	object_const_def
 	const COOLDUDE
@@ -51,10 +52,10 @@ SeakingWaterfallScript2:
 SeakingArrivesScript:
 	turnobject PLAYER, RIGHT
 	opentext
-	writetext Text_CallForSeaking_YesNo
+	writetext Text_JungleValley_CallForSeaking_YesNo
 	yesorno
 	iffalsefwd .CloseText
-	showtext Text_CallForSeaking
+	showtext Text_JungleValley_CallForSeaking
 	wait 20
 	appear WATERFALL_SEAKING
 	applymovement WATERFALL_SEAKING, Movement_SeakingSwimDown
@@ -68,7 +69,7 @@ SeakingArrivesScript:
 
 SeakingScript:
 	opentext
-	writetext Text_JumpOntoSeaking_YesNo
+	writetext Text_JungleValley_JumpOntoSeaking_YesNo
 	yesorno
 	iffalsefwd .CloseText
 	closetext
@@ -116,7 +117,29 @@ Movement_JumpOntoSeaking:
 	hide_object
 	step_end
 
-Text_JumpOntoSeaking_YesNo:
+Text_JungleValley_GuyLovingTown:
+	text "I love this place!"
+	
+	para "It's so quiet that"
+	line "all you can hear"
+	cont "is the waterfall."
+
+	para "There is always a"
+	line "cool, refreshing" 
+	cont "mist in the air."
+	done
+
+Text_JungleValley_GuyRockBlockingRoad:
+	text "Heavy rainfall re-"
+	line "cently caused a"
+	cont "landslide."
+
+	para "Some rocks are"
+	line "blocking the road"
+	cont "to the west."
+	done
+
+Text_JungleValley_JumpOntoSeaking_YesNo:
 	text "Jump onto Marnie"
 	line "and head home?"
 
@@ -125,15 +148,15 @@ Text_JumpOntoSeaking_YesNo:
 	cont "ley again."
 	done
 
-Text_CallForSeaking:
+Text_JungleValley_CallForSeaking:
 	text "MARNIE!!!"
 	done
 
-Text_CallForSeaking_YesNo:
+Text_JungleValley_CallForSeaking_YesNo:
 	text "Call for Marnie?"
 	done
 
-JungleValleyCooltrainermText:
+Text_JungleValley_GuyText:
 	text "I can eat six"
 	line "meatballs in one"
 	cont "sitting."
@@ -141,27 +164,27 @@ JungleValleyCooltrainermText:
 	para "At least.."
 	done
 
-JungleValleySignText:
+Text_JungleValley_Sign:
 	text "Jungle Valley"
 
-	para "Like a fever dream"
-	line "but without the"
-	cont "cold sweat."
+	para "Nature and humans,"
+	line "side by side in"
+	cont "harmony."
 	done
 
-VillageDoctorSignText:
-	text "Doctor Mowgli"
+Text_JungleValley_ProfRamonHouseSignText:
+	text "Prof. Ramon"
 
 	para "Village doctor"
 	line "tropical diseases"
 	cont "and herbal meds."
 	done
 
-JungleValleyLockedDoorText:
+Text_JungleValley_LockedDoorText:
 	text "A key is required."
 	done
 
-PumpStationSignText:
+Text_JungleValley_PumpStationSign:
 	text "Jungle Valley"
 	line "pump station"
 	done

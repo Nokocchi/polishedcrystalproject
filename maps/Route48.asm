@@ -2,37 +2,122 @@ Route48_MapScriptHeader:
 	def_scene_scripts
 
 	def_callbacks
-	callback MAPCALLBACK_NEWMAP, Route48JessieJamesCallback
 
 	def_warp_events
-	warp_event 13,  5, YELLOW_FOREST_GATE, 3
+	warp_event 33,  0, YELLOW_FOREST_GATE, 3
+	warp_event 23,  5, MR_FUJIS_HOUSE, 1
 
 	def_coord_events
-	coord_event 22, 12, 0, Route48JessieJamesScript1
-	coord_event 22, 13, 0, Route48JessieJamesScript2
 
 	def_bg_events
-	bg_event 29, 11, BGEVENT_JUMPTEXT, Route48YellowForestSignText
+	bg_event 27, 11, BGEVENT_JUMPTEXT, Text_Route48_Sign
+	bg_event 24, 6, BGEVENT_JUMPTEXT, Text_Route48_Spa
 
 	def_object_events
-	object_event 13,  6, SPRITE_ARCHER, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_TRAINER, 1, TrainerArcher2, EVENT_CLEARED_YELLOW_FOREST
-	object_event 17, 12, SPRITE_JESSIE, SPRITEMOVEDATA_STANDING_RIGHT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_48_JESSIE
-	object_event 28, 12, SPRITE_JAMES, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_48_JAMES
-	object_event 13,  5, SPRITE_NURSE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, ObjectEvent, EVENT_ROUTE_48_NURSE
-	itemball_event  6, 13, NUGGET, 1, EVENT_ROUTE_48_NUGGET
+	object_event  17,  4, SPRITE_MON_ICON, SPRITEMOVEDATA_POKEMON, 0, SPINARAK, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_SCRIPT, NO_FORM, Route48_SpinarakSpooked, EVENT_SPINARAK_SPOOKED
+	object_event 9,   8, SPRITE_SCHOOLGIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, TrainerSchoolgirlIsabelPlaceholder, -1
+	object_event 24, 17, SPRITE_LASS, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_GENERICTRAINER, 3, TrainerAromaladyBryonyPlaceholder, -1
+	object_event 26, 11, SPRITE_SUPER_NERD, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_Route48_Supernerd, -1
+	itemball_event  8, 8, POTION, 1, EVENT_ROUTE_48_POTION
 
 	object_const_def
-	const ROUTE48_ARCHER
-	const ROUTE48_JESSIE
-	const ROUTE48_JAMES
-	const ROUTE48_NURSE
+	const ROUTE48_SPINARAK
 
-Route48JessieJamesCallback:
-	setflag ENGINE_FLYPOINT_YELLOW_FOREST
-	disappear ROUTE48_JESSIE
-	disappear ROUTE48_JAMES
-	endcallback
+Route48_SpinarakSpooked:
+	showemote EMOTE_SHOCK, ROUTE48_SPINARAK, 15
+	turnobject ROUTE48_SPINARAK, DOWN
+	showtext Text_Route48_SpinarakSpooked
+	applyonemovement ROUTE48_SPINARAK, fast_step_right
+	disappear ROUTE48_SPINARAK
+	showtext Text_Route48_SpinarakRanAway
+	end
 
+Text_Route48_SpinarakRanAway:
+	text "Spinarak got spo-"
+	line "oked and ran way."
+	done
+
+Text_Route48_SpinarakSpooked:
+	text "Spinarak!!"
+	done
+
+Text_Route48_Spa:
+	text "Olympus Spa"
+
+	para "Take a dip in our"
+	line "refreshing jungle"
+	cont "water."
+	done
+
+Text_Route48_Supernerd:
+	text "If you get lost,"
+	line "just read the sign"
+	cont "to my left."
+	done
+
+Text_Route48_Sign:
+	text "Route 48"
+
+	para "North:"
+	line "Chirali Forest"
+
+	para "East:"
+	line "Route 49"
+	done
+
+TrainerAromaladyBryonyPlaceholder:
+	generictrainer AROMA_LADY, BRYONY, EVENT_BEAT_AROMA_LADY_BRYONY, .SeenText, .BeatenText
+	
+	text "It would really be"
+	line "more convenient"
+	
+	para "with a bridge to"
+	line "the other side.."
+
+	para "Oh, you are a"
+	line "trainer? Let's go!"
+	done
+
+.SeenText:
+	text "Placeholder"
+	done
+
+.BeatenText:
+	text "Placeholder"
+	done
+
+TrainerSchoolgirlIsabelPlaceholder:
+	trainer SCHOOLGIRL, ISABEL, EVENT_BEAT_SCHOOLGIRL_ISABEL, .SchoolgirlIsabelSeenText, .SchoolgirlIsabelBeatenText, .SchoolgirlIsabelLostText, -1
+
+	text "My parents wanted"
+	line "me to be a #mon"
+	cont "trainer."
+
+	para "But I am scared."
+	line "What if I am not"
+
+	para "as good as all the"
+	line "other kids?"
+	done
+
+.SchoolgirlIsabelSeenText:
+	text "Placeholder"
+	done
+
+.SchoolgirlIsabelBeatenText:
+	text "You have really"
+	line "strong #mon!"
+	done
+
+.SchoolgirlIsabelLostText:
+	text "I can't believe"
+	line "I won?!"
+
+	para "Maybe I'm not so"
+	line "bad at this.."
+	done
+
+/*
 Route48JessieJamesScript2:
 	moveobject ROUTE48_JESSIE, 15, 13
 	moveobject ROUTE48_JAMES, 26, 13
@@ -207,3 +292,4 @@ Route48YellowForestSignText:
 	para "North to"
 	line "Yellow Forest"
 	done
+*/

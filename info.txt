@@ -70,3 +70,5 @@ changeblock 8, 8, $25
 paired_step_right
 loadmem wFollowMovementQueue, movement_teleport_from
 object event SPRITE_MON_ICON => Use this for the monkey? What does it do?
+changebridgeblock in Yellow Forest
+text_ram wStringBuffer1

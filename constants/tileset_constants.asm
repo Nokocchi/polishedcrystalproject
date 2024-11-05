@@ -26,7 +26,7 @@ DEF NO_ROOF_TILESETS EQU const_value
 	const TILESET_FACILITY             ; 17
 	const TILESET_CELADON_MANSION      ; 18
 	const TILESET_GAME_CORNER          ; 19
-	const TILESET_HOME_DECOR_STORE     ; 1a
+	const TILESET_SPA     			   ; 1a
 	const TILESET_MUSEUM               ; 1b
 	const TILESET_HOTEL                ; 1c
 	const TILESET_SPROUT_TOWER         ; 1d

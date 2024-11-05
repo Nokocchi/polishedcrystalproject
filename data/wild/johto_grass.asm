@@ -1823,29 +1823,29 @@
 	def_grass_wildmons ROUTE_48
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	wildmon LEVEL_FROM_BADGES + 1, FARFETCH_D, GALARIAN_FORM
-	wildmon LEVEL_FROM_BADGES + 0, TAUROS
-	wildmon LEVEL_FROM_BADGES - 2, SUNFLORA
-	wildmon LEVEL_FROM_BADGES - 2, GROWLITHE
-	wildmon LEVEL_FROM_BADGES - 3, FARFETCH_D, GALARIAN_FORM
-	wildmon LEVEL_FROM_BADGES - 4, GIRAFARIG
-	wildmon LEVEL_FROM_BADGES - 4, GIRAFARIG
+	wildmon 3, TANGELA
+	wildmon 3, SPINARAK
+	wildmon 4, EXEGGCUTE
+	wildmon 4, SPINARAK
+	wildmon 4, LEDYBA
+	wildmon 3, WEEDLE
+	wildmon 2, CATERPIE
 	; day
-	wildmon LEVEL_FROM_BADGES + 1, FARFETCH_D, GALARIAN_FORM
-	wildmon LEVEL_FROM_BADGES + 0, TAUROS
-	wildmon LEVEL_FROM_BADGES - 2, GLOOM
-	wildmon LEVEL_FROM_BADGES - 2, HOUNDOUR
-	wildmon LEVEL_FROM_BADGES - 3, FARFETCH_D, GALARIAN_FORM
-	wildmon LEVEL_FROM_BADGES - 4, GIRAFARIG
-	wildmon LEVEL_FROM_BADGES - 4, GIRAFARIG
+	wildmon 3, TANGELA
+	wildmon 3, SPINARAK
+	wildmon 4, EXEGGCUTE
+	wildmon 4, SPINARAK
+	wildmon 4, LEDYBA
+	wildmon 3, WEEDLE
+	wildmon 2, CATERPIE
 	; nite
-	wildmon LEVEL_FROM_BADGES + 1, HOUNDOUR
-	wildmon LEVEL_FROM_BADGES + 0, TAUROS
-	wildmon LEVEL_FROM_BADGES - 2, GLOOM
-	wildmon LEVEL_FROM_BADGES - 2, VULPIX
-	wildmon LEVEL_FROM_BADGES - 3, NOCTOWL
-	wildmon LEVEL_FROM_BADGES - 4, GIRAFARIG
-	wildmon LEVEL_FROM_BADGES - 4, GIRAFARIG
+	wildmon 3, TANGELA
+	wildmon 3, SPINARAK
+	wildmon 4, EXEGGCUTE
+	wildmon 4, SPINARAK
+	wildmon 4, LEDYBA
+	wildmon 3, WEEDLE
+	wildmon 2, CATERPIE
 	end_grass_wildmons
 
 	def_grass_wildmons CLIFF_CAVE

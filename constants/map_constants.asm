@@ -384,7 +384,7 @@ ENDM
 	map_const ROUTE_12_NORTH,                             10,  9 ;  4
 	map_const LAVENDER_TOWN,                              10, 10 ;  5
 	map_const LAVENDER_POKECENTER_1F,                      6,  4 ;  6
-	map_const MR_FUJIS_HOUSE,                              5,  4 ;  7
+	map_const MR_FUJIS_HOUSE,                              5,  9 ;  7
 	map_const LAVENDER_TOWN_SPEECH_HOUSE,                  4,  4 ;  8
 	map_const LAVENDER_NAME_RATER,                         4,  4 ;  9
 	map_const LAVENDER_MART,                               6,  4 ; 10

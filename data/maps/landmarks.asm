@@ -299,4 +299,3 @@ SinjohRuinsName:       rawchar "Sinjoh¯Ruins@"
 MystriStageName:       rawchar "Mystri¯Stage@"
 CinnabarLabName:       rawchar "Pokémon¯Lab@"
 SpecialMapName:        rawchar "?@"
-	; nTODO Make a name for the starting cave
