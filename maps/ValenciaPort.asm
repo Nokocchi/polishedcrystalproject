@@ -18,6 +18,9 @@ ValenciaPort_MapScriptHeader:
 	coord_event 16, 14, 1, ValenciaPort_SuspiciousGuyTrigger1a
 	coord_event 16, 15, 1, ValenciaPort_SuspiciousGuyTrigger1b
 
+	coord_event 18, 14, 2, ValenciaPort_CantBringMonkeyHereTrigger1
+	coord_event 19, 16, 2, ValenciaPort_CantBringMonkeyHereTrigger2
+
 	coord_event 9, 14, 2, ValenciaPort_MonkeyAttacksTrigger
 	coord_event 9, 15, 2, ValenciaPort_MonkeyAttacksTrigger
 
@@ -39,6 +42,24 @@ ValenciaPortRainScript:
 .rain
 	changemapblocks ValenciaPortRaining_BlockData
 	endcallback
+
+ValenciaPort_CantBringMonkeyHereTrigger1:
+	readvar VAR_FACING
+	ifequalfwd RIGHT, .WalkDown
+	applyonemovement PLAYER, step_left
+	end
+.WalkDown
+	applyonemovement PLAYER, step_down
+	end
+
+ValenciaPort_CantBringMonkeyHereTrigger2:
+	readvar VAR_FACING
+	ifequalfwd DOWN, .WalkLeft
+	applyonemovement PLAYER, step_up
+	end
+.WalkLeft
+	applyonemovement PLAYER, step_left
+	end
 
 ValenciaPort_SuspiciousGuyTrigger0a:
 ValenciaPort_SuspiciousGuyTrigger0b:
@@ -66,6 +87,7 @@ GiveMonkey:
 	appear MONKEY_FOLLOW
 	wait 10
 	turnobject PLAYER, DOWN
+	clearevent EVENT_ALLOW_OVERWORLD_LIGHTNING
 	follow PLAYER, MONKEY_FOLLOW
 	wait 5
 	showtext Text_ThatsNotAMankey
@@ -92,6 +114,7 @@ ValenciaPort_MonkeyAttacksTrigger:
 	wait 10
 	showtext Text_UncomfortableWithTheMonkey
 	stopfollow
+	setevent EVENT_ALLOW_OVERWORLD_LIGHTNING
 	applymovement PLAYER, Movement_SlowlyUpAndToLeft
 	applymovement MONKEY_FOLLOW, Movement_QuickUpAndToLeft
 	showemote EMOTE_QUESTION, PLAYER, 10
@@ -106,18 +129,17 @@ ValenciaPort_MonkeyAttacksTrigger:
 	turnobject PLAYER, DOWN
 	showemote EMOTE_SHOCK, PLAYER, 15
 	turnobject PLAYER, LEFT
-	wait 10
+	wait 5
 	turnobject PLAYER, RIGHT
-	wait 10
+	wait 5
 	turnobject PLAYER, UP
-	wait 10
+	wait 5
 	playsound SFX_BITE
 	showemote EMOTE_SHOCK, PLAYER, 15
 	turnobject PLAYER, DOWN
-	wait 5
+	showtext Text_InfectedBiteReaction
 	applymovement MONKEY_FOLLOW, Movement_MonkeyRunAway
 	disappear MONKEY_FOLLOW
-	showtext Text_InfectedBiteReaction
 	setevent EVENT_MONKEY_BITE_INFECTED
 	callasm RemoveMonkeyFromParty
 	setscene $3

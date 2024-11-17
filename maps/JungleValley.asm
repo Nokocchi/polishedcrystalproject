@@ -23,7 +23,7 @@ JungleValley_MapScriptHeader:
 	object_event  9,  8, SPRITE_COOL_DUDE, SPRITEMOVEDATA_WALK_LEFT_RIGHT, 0, 1, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_JungleValley_GuyText, -1
 	object_event 20,  8, SPRITE_MONKEY, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_SCRIPT, 0, SeakingScript, EVENT_SEAKING_AT_WATERFALL
 	object_event  4,  19, SPRITE_COOL_DUDE, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_JungleValley_GuyRockBlockingRoad, -1
-	object_event  4,  19, SPRITE_COOL_DUDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_JungleValley_GuyLovingTown, -1
+	object_event 17,  7, SPRITE_COOL_DUDE, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, 0, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_JungleValley_GuyLovingTown, -1
 
 	object_const_def
 	const COOLDUDE

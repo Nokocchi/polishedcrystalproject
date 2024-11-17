@@ -55,7 +55,7 @@ Movement_SeakingLeaves:
 	step_end
 
 Text_Route49_LittleGirl:
-	text "I'm playin in the"
+	text "I'm playing in the"
 	line "garden while my"
 	cont "mom is cooking!"
 
@@ -79,8 +79,7 @@ Text_Route49_SadBoy:
 	cont "looking at?!"
 
 	para "I wish I could get"
-	line "my own #mon just"
-	cont "like my brother.."
+	line "my own #mon.."
 	done
 
 Text_Route49_SomeHouseSign:

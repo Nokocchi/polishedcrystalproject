@@ -319,6 +319,14 @@ DoOverworldRain:
 	cp OW_WEATHER_THUNDERSTORM
 	jr nz, .no_lightning
 
+	ld b, CHECK_FLAG
+	ld de, EVENT_ALLOW_OVERWORLD_LIGHTNING
+	call EventFlagAction
+	ld a, c
+	and a
+	jr z, .no_lightning
+
+.trylightning
 	; 0.5% chance of lightning
 	call Random
 	cp 1 percent

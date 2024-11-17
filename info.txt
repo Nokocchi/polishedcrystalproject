@@ -72,3 +72,7 @@ loadmem wFollowMovementQueue, movement_teleport_from
 object event SPRITE_MON_ICON => Use this for the monkey? What does it do?
 changebridgeblock in Yellow Forest
 text_ram wStringBuffer1
+	bit OW_WEATHER_DISABLED_F, [hl]
+	and %1
+	cp 50 percent
+	call c, Lightning

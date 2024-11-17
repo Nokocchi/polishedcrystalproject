@@ -4,7 +4,7 @@ Route48_MapScriptHeader:
 	def_callbacks
 
 	def_warp_events
-	warp_event 33,  0, YELLOW_FOREST_GATE, 3
+	warp_event 33,  0, ILEX_FOREST, 2	
 	warp_event 23,  5, MR_FUJIS_HOUSE, 1
 
 	def_coord_events

@@ -13,6 +13,7 @@ MrFujisHouse_MapScriptHeader:
 
 	def_object_events
 	object_event 2, 12, SPRITE_CUTE_GIRL, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_GREEN, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_MrFujisHouse_Girl, -1
+	object_event 2, 16, SPRITE_COOL_GUY, SPRITEMOVEDATA_STANDING_DOWN, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_COMMAND, jumptextfaceplayer, Text_MrFujisHouse_Guy, -1
 	object_event 7, 13, SPRITE_CLERK, SPRITEMOVEDATA_STANDING_LEFT, 0, 0, -1, -1, PAL_NPC_BLUE, OBJECTTYPE_SCRIPT, 0, MrFujisHouseClerkScript, -1
 	pokemon_event  8, 6, PSYDUCK, SPRITEMOVEDATA_POKEMON, -1, -1, PAL_NPC_BROWN, Text_MrFujisHouse_Psyduck, -1
 
@@ -36,6 +37,19 @@ MrFujisHouseClerkScript:
 	closetext
 .End
 	end
+
+Text_MrFujisHouse_Guy:
+	text "I wanted to come"
+	line "here for months!"
+
+	para "It took a while to"
+	line "convince my girl-"
+	cont "friend, though."
+
+	para "She wasn't really"
+	line "sold on the jungle"
+	cont "water.."
+	done
 
 Text_MrFujisHouse_ClerkHealed:
 	text "The soothing,"

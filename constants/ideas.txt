@@ -16,7 +16,7 @@ x The screen flashes, maybe green hue?
 x You stumble across a jungle hut where a woman makes an antidote for you.
 Extra: You have nightmares of the monkey biting you?
 She requests that you go out and find an item for her as a reward. 
-You are now home and can talk to professor
+x You are now home and can talk to professor
 The jungle valley overflows and allows you to go new places with surf. You fix it in the wastewater treatment facility
 West passage from Jungle Valley is blocked to begin with, but accessible during flooding. Afterwards, maybe a big rock will be carried away by flood and stuck in the water in the Jungle Valley so the west passage is accessible permanently.
 A town with a river running through it, with little bridges and houses next to the river. Maybe ecruteak style tilemaps?
@@ -29,3 +29,9 @@ Push rocket grunt into a hole with Strength and walk over him
 Some kind of panning like in SnowtopMountainOutside
 x Water and puddle "raindrop" animations during rain
 Somebody that you need to show pokemon to. It gets increasingly more difficult and you get better and better rewards? 
+A bridge that is visibly broken, and you need to bring materials to fix it
+
+Music:
+Life is like a boat
+Sensommervise
+The funeral

@@ -95,7 +95,7 @@ ENDM
 	map_const TEAM_ROCKET_BASE_B1F,                       15,  9 ; 39
 	map_const TEAM_ROCKET_BASE_B2F,                       15,  9 ; 40
 	map_const TEAM_ROCKET_BASE_B3F,                       15,  9 ; 41
-	map_const ILEX_FOREST,                                17, 24 ; 42
+	map_const ILEX_FOREST,                                18, 24 ; 42
 	map_const WAREHOUSE_ENTRANCE,                         16, 18 ; 43
 	map_const UNDERGROUND_PATH_SWITCH_ROOM_ENTRANCES,     13, 21 ; 44
 	map_const GOLDENROD_DEPT_STORE_B1F,                   10,  9 ; 45
